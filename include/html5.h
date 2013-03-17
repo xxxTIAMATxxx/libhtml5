@@ -9,20 +9,20 @@
 
 typedef struct
 {
-		char *accesskey;
-		char *cssclass;
-		char *contenteditable;
-		char *contextmenu;
-		char *dir;
-		char *draggable;
-		char *dropzone;
-		char *hidden;
-		char *id;
-		char *lang;
-		char *spellcheck;
-		char *style;
-		char *tabindex;
-		char *title;
+	char *accesskey;
+	char *cssclass;
+	char *contenteditable;
+	char *contextmenu;
+	char *dir;
+	char *draggable;
+	char *dropzone;
+	char *hidden;
+	char *id;
+	char *lang;
+	char *spellcheck;
+	char *style;
+	char *tabindex;
+	char *title;
 }html5_attributes_global;
 
 typedef struct
@@ -546,7 +546,6 @@ typedef struct
 
 extern void html5_doctype(void);
 extern void html5_comment(const char *comment);
-extern void html5_eof(void);
 
 extern void html5_acronym(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
 extern void html5_address(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);

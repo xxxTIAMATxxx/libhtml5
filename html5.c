@@ -2430,18 +2430,28 @@ void html5_a(html5_attributes_global *html5_attr_global, html5_attributes_a *htm
 
 	printf(">");
 }
-/*
-void html5_abbr(html5_attributes_global *html5_attr_global, html5_attributes_abbr *html5_attr_abbr, html5_event_attributes *html5_attr_event)
+
+void html5_abbr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
 	printf("<abbr");
-
+	
 	html5_render_attributes_global(html5_attr_global);
-	html5_render_attributes_abbr(html5_attr_abbr);
 	html5_render_event_attributes(html5_attr_event);
+	
+	printf("/>");
+}
 
+void html5_attributes_abbr_outset(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
+{
+	printf("<abbr");
+	
+	html5_render_attributes_global(html5_attr_global);
+	html5_render_event_attributes(html5_attr_event);
+	
 	printf(">");
 }
-*/
+
+
 void html5_area(html5_attributes_global *html5_attr_global, html5_attributes_area *html5_attr_area, html5_event_attributes *html5_attr_event)
 {
 	printf("<area");

@@ -621,7 +621,7 @@ extern void html5_ul(html5_attributes_global *html5_attr_global, html5_event_att
 extern void html5_var(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
 extern void html5_wbr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
 extern void html5_a(html5_attributes_global *html5_attr_global, html5_attributes_a *html5_attr_a, html5_event_attributes *html5_event_attr);
-// extern void html5_abbr(html5_attributes_global *html5_attr_global, html5_attributes_abbr *html5_attr_abbr, html5_event_attributes *html5_event_attr);
+extern void html5_abbr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_event_attr);
 extern void html5_area(html5_attributes_global *html5_attr_global, html5_attributes_area *html5_attr_area, html5_event_attributes *html5_event_attr);
 extern void html5_audio(html5_attributes_global *html5_attr_global, html5_attributes_audio *html5_attr_audio, html5_event_attributes *html5_event_attr);
 extern void html5_base(html5_attributes_global *html5_attr_global, html5_attributes_base *html5_attr_base, html5_event_attributes *html5_event_attr);
@@ -676,7 +676,6 @@ extern void html5_video(html5_attributes_global *html5_attr_global, html5_attrib
 extern void html5_attribute_global_outset(html5_attributes_global *html5_attr_global);
 extern void html5_attribute_body_outset(html5_attributes_body *html5_attr_body);
 extern void html5_attributes_a_outset(html5_attributes_a *attr_a);
-// extern void html5_attributes_abbr_outset(html5_attributes_abbr *attr_abbr);
 extern void html5_attributes_area_outset(html5_attributes_area *attr_area);
 extern void html5_attributes_audio_outset(html5_attributes_audio *attr_audio);
 extern void html5_attributes_base_outset(html5_attributes_base *attr_base);

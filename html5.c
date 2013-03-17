@@ -1,16 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <assert.h>
+
 #include <html5.h>
 
-#define ASSERT(x) if(x == NULL) panic_exit();
-
 #define assert_null_ret(x) if(x == NULL){return;}
-
-void panic_exit()
-{
-	exit(-1);
-}
 
 void html5_render_attributes_global(html5_attributes_global *gattr)
 {	
@@ -476,29 +471,17 @@ void html5_render_event_attributes(html5_event_attributes *event_attr)
 	}
 }
 
-void html5_event_attributes_reset(html5_event_attributes *evattr)
+
+void html5_event_attributes_outset(html5_event_attributes *evattr)
 {
-	if(evattr->event_attr_form != NULL)
-	{
-		html5_event_attribute_form_reset(evattr->event_attr_form);
-	}
-	
-	if(evattr->event_attr_media != NULL)
-	{	
-		html5_event_attribute_media_reset(evattr->event_attr_media);
-	}
-	
-	if(evattr->event_attr_mouse != NULL)
-	{
-		html5_event_attribute_mouse_reset(evattr->event_attr_mouse);
-	}
-	if(evattr->event_attr_window != NULL)
-	{
-		html5_event_attribute_window_reset(evattr->event_attr_window);
-	}
+	html5_event_attribute_form_outset(evattr->event_attr_form);
+	html5_event_attribute_media_outset(evattr->event_attr_media);
+	html5_event_attribute_mouse_outset(evattr->event_attr_mouse);
+	html5_event_attribute_window_outset(evattr->event_attr_window);
 }
 
-void html5_event_attribute_form_reset(html5_event_attributes_form *event_attr_form)
+
+void html5_event_attribute_form_outset(html5_event_attributes_form *event_attr_form)
 {
 	event_attr_form->onblur = NULL;
 	event_attr_form->onchange = NULL;
@@ -513,7 +496,7 @@ void html5_event_attribute_form_reset(html5_event_attributes_form *event_attr_fo
 	event_attr_form->onsubmit = NULL;
 }
 
-void html5_event_attribute_media_reset(html5_event_attributes_media *event_attr_media)
+void html5_event_attribute_media_outset(html5_event_attributes_media *event_attr_media)
 {
 	event_attr_media->onabort = NULL;
 	event_attr_media->oncanplay = NULL;
@@ -540,7 +523,7 @@ void html5_event_attribute_media_reset(html5_event_attributes_media *event_attr_
 }
 
 
-void html5_event_attribute_mouse_reset(html5_event_attributes_mouse *event_attr_mouse)
+void html5_event_attribute_mouse_outset(html5_event_attributes_mouse *event_attr_mouse)
 {
 	event_attr_mouse->inmousewheel = NULL;
 	event_attr_mouse->onclick = NULL;
@@ -560,7 +543,7 @@ void html5_event_attribute_mouse_reset(html5_event_attributes_mouse *event_attr_
 	event_attr_mouse->onscroll = NULL;
 }
 
-void html5_event_attribute_window_reset(html5_event_attributes_window *event_attr_window)
+void html5_event_attribute_window_outset(html5_event_attributes_window *event_attr_window)
 {
 	event_attr_window->onafterprint = NULL;
 	event_attr_window->onbeforeonload = NULL;
@@ -584,83 +567,6 @@ void html5_event_attribute_window_reset(html5_event_attributes_window *event_att
 }
 
 
-void html5_init_event_attributes(html5_event_attributes **event_attr, char event_flags)
-{
- 	*event_attr = malloc(sizeof **event_attr);
-	ASSERT(*event_attr);
-	
-	if(event_flags & HTML5_EVENT_INIT_EVERYTHING)
-	{
-		(*event_attr)->event_attr_form = malloc(sizeof *(*event_attr)->event_attr_form);
-		ASSERT((*event_attr)->event_attr_form)		
-		html5_event_attribute_form_reset((*event_attr)->event_attr_form);
-		
-		(*event_attr)->event_attr_media = malloc(sizeof *(*event_attr)->event_attr_media);
-		ASSERT((*event_attr)->event_attr_media);
-		html5_event_attribute_media_reset((*event_attr)->event_attr_media);
-				
-		(*event_attr)->event_attr_mouse = malloc(sizeof *(*event_attr)->event_attr_mouse);
-		ASSERT((*event_attr)->event_attr_mouse);
-		html5_event_attribute_mouse_reset((*event_attr)->event_attr_mouse);
-		
-		(*event_attr)->event_attr_window = malloc(sizeof *(*event_attr)->event_attr_window);
-		ASSERT((*event_attr)->event_attr_window);
-		html5_event_attribute_window_reset((*event_attr)->event_attr_window);
-		
-		return;
-	}
-	else
-	{
-		if(event_flags & HTML5_EVENT_INIT_FORM)
-		{
-			(*event_attr)->event_attr_form = malloc(sizeof *(*event_attr)->event_attr_form);
-			ASSERT((*event_attr)->event_attr_form);
-			html5_event_attribute_form_reset((*event_attr)->event_attr_form);
-		}
-		else
-		{
-			(*event_attr)->event_attr_form = NULL;
-		}
-		
-		if(event_flags & HTML5_EVENT_INIT_MEDIA)
-		{
-			(*event_attr)->event_attr_media = malloc(sizeof *(*event_attr)->event_attr_media);
-			ASSERT((*event_attr)->event_attr_media);
-			html5_event_attribute_media_reset((*event_attr)->event_attr_media);
-		}
-		else
-		{
-			(*event_attr)->event_attr_media = NULL;
-		}
-		
-		
-		if(event_flags & HTML5_EVENT_INIT_MOUSE)
-		{
-			(*event_attr)->event_attr_mouse = malloc(sizeof *(*event_attr)->event_attr_mouse);
-			ASSERT((*event_attr)->event_attr_mouse);
-			html5_event_attribute_mouse_reset((*event_attr)->event_attr_mouse);
-		}
-		else
-		{
-			(*event_attr)->event_attr_mouse = NULL;
-		}
-		
-		if(event_flags & HTML5_EVENT_INIT_WINDOW)
-		{
-			(*event_attr)->event_attr_window = malloc(sizeof *(*event_attr)->event_attr_window);
-			ASSERT((*event_attr)->event_attr_window);
-			html5_event_attribute_window_reset((*event_attr)->event_attr_window);
-		}
-		else
-		{
-			(*event_attr)->event_attr_window = NULL;
-		}
-		
-		return;
-	}
-	
-}
-
 void html5_render_attributes_body(html5_attributes_body *attr_body)
 {
 	assert_null_ret(attr_body);
@@ -676,19 +582,15 @@ void html5_render_attributes_body(html5_attributes_body *attr_body)
 	}
 }
 
-void html5_attribute_body_reset(html5_attributes_body *html5_attr_body)
+void html5_attribute_body_outset(html5_attributes_body *html5_attr_body)
 {
-	ASSERT(html5_attr_body);
 	html5_attr_body->manifest = NULL;
 	html5_attr_body->xmlns = NULL;
 }
 
-void html5_init_attribute_body(html5_attributes_body **body)
+void html5_init_attribute_body(html5_attributes_body *body)
 {
-	*body = malloc(sizeof **body);
-	ASSERT(*body);
-
-	html5_attribute_body_reset(*body);
+	html5_attribute_body_outset(body);
 }
 
 
@@ -704,26 +606,8 @@ void html5_body(html5_attributes_global *html5_attr_global, html5_attributes_bod
 	printf(">\n");
 }
 
-void html5_init_attribute_a(html5_attributes_a **html5_attr_a)
+void html5_attribute_global_outset(html5_attributes_global *html5_attr_global)
 {
-	*html5_attr_a = malloc(sizeof **html5_attr_a);
-	
-	ASSERT(*html5_attr_a);
-	
-	(*html5_attr_a)->href = NULL;
-	(*html5_attr_a)->hreflang = NULL;
-	(*html5_attr_a)->media = NULL;
-	(*html5_attr_a)->rel = NULL;
-	(*html5_attr_a)->target = NULL;
-	(*html5_attr_a)->type = NULL;
-	(*html5_attr_a)->_ext = NULL;
-}
-
-
-void html5_attribute_reset(html5_attributes_global *html5_attr_global)
-{	
-	ASSERT(html5_attr_global);
-	
 	html5_attr_global->accesskey = NULL;
 	html5_attr_global->cssclass = NULL;
 	html5_attr_global->contenteditable = NULL;
@@ -738,28 +622,6 @@ void html5_attribute_reset(html5_attributes_global *html5_attr_global)
 	html5_attr_global->style = NULL;
 	html5_attr_global->tabindex = NULL;
 	html5_attr_global->title = NULL;
-}
-
-void html5_init_attributes_global(html5_attributes_global **html5_attr_global)
-{
-	*html5_attr_global = malloc(sizeof **html5_attr_global);
-	
-	ASSERT(*html5_attr_global);
-	
-	(*html5_attr_global)->accesskey = NULL;
-	(*html5_attr_global)->cssclass = NULL;
-	(*html5_attr_global)->contenteditable = NULL;
-	(*html5_attr_global)->contextmenu = NULL;
-	(*html5_attr_global)->dir = NULL;
-	(*html5_attr_global)->draggable = NULL;
-	(*html5_attr_global)->dropzone = NULL;
-	(*html5_attr_global)->hidden = NULL;
-	(*html5_attr_global)->id = NULL;
-	(*html5_attr_global)->lang = NULL;
-	(*html5_attr_global)->spellcheck = NULL;
-	(*html5_attr_global)->style = NULL;
-	(*html5_attr_global)->tabindex = NULL;
-	(*html5_attr_global)->title = NULL;
 }
 
 void html5_render_attributes_a(html5_attributes_a *attr)
@@ -2094,7 +1956,7 @@ void html5_render_attributes_video(html5_attributes_video *attr_video)
 }
 
 
-void html5_attributes_a_reset(html5_attributes_a *attr_a)
+void html5_attributes_a_outset(html5_attributes_a *attr_a)
 {
 	attr_a->_ext = NULL;
 	attr_a->href = NULL;
@@ -2107,7 +1969,7 @@ void html5_attributes_a_reset(html5_attributes_a *attr_a)
 
 
 
-void html5_attributes_area_reset(html5_attributes_area *attr_area)
+void html5_attributes_area_outset(html5_attributes_area *attr_area)
 {
 	attr_area->alt = NULL;
 	attr_area->coords = NULL;
@@ -2120,7 +1982,7 @@ void html5_attributes_area_reset(html5_attributes_area *attr_area)
 	attr_area->type = NULL;	
 }
 
-void html5_attributes_audio_reset(html5_attributes_audio *attr_audio)
+void html5_attributes_audio_outset(html5_attributes_audio *attr_audio)
 {
 	attr_audio->autoplay = NULL;
 	attr_audio->controls = NULL;
@@ -2129,29 +1991,29 @@ void html5_attributes_audio_reset(html5_attributes_audio *attr_audio)
 	attr_audio->src = NULL;
 }
 
-void html5_attributes_base_reset(html5_attributes_base *attr_base)
+void html5_attributes_base_outset(html5_attributes_base *attr_base)
 {
 	attr_base->href = NULL;
 	attr_base->target = NULL;
 }
 
-void html5_attributes_bdo_reset(html5_attributes_bdo *attr_bdo)
+void html5_attributes_bdo_outset(html5_attributes_bdo *attr_bdo)
 {	
 	attr_bdo->dir = NULL;	
 }
 
-void html5_attributes_blockquote_reset(html5_attributes_blockquote *attr_blockquote)
+void html5_attributes_blockquote_outset(html5_attributes_blockquote *attr_blockquote)
 {
 	attr_blockquote->cite = NULL;
 }
 
-void html5_attributes_body_reset(html5_attributes_body *attr_body)
+void html5_attributes_body_outset(html5_attributes_body *attr_body)
 {
 	attr_body->manifest = NULL;
 	attr_body->xmlns = NULL;
 }
 
-void html5_attributes_button_reset(html5_attributes_button *attr_button)
+void html5_attributes_button_outset(html5_attributes_button *attr_button)
 {
 	attr_button->autofocus = NULL;
 	attr_button->disabled = NULL;
@@ -2166,25 +2028,25 @@ void html5_attributes_button_reset(html5_attributes_button *attr_button)
 	attr_button->value = NULL;
 }
 
-void html5_attributes_canvas_reset(html5_attributes_canvas *attr_canvas)
+void html5_attributes_canvas_outset(html5_attributes_canvas *attr_canvas)
 {
 	attr_canvas->height = NULL;
 	attr_canvas->width = NULL;
 	
 }
 
-void html5_attributes_col_reset(html5_attributes_col *attr_col)
+void html5_attributes_col_outset(html5_attributes_col *attr_col)
 {
 	attr_col->span = NULL;
 	
 }
 
-void html5_attributes_colgroup_reset(html5_attributes_colgroup *attr_colgroup)
+void html5_attributes_colgroup_outset(html5_attributes_colgroup *attr_colgroup)
 {
 	attr_colgroup->span = NULL;
 }
 
-void html5_attributes_command_reset(html5_attributes_command *attr_command)
+void html5_attributes_command_outset(html5_attributes_command *attr_command)
 {
 	attr_command->checked = NULL;
 	attr_command->disabled = NULL;
@@ -2194,19 +2056,19 @@ void html5_attributes_command_reset(html5_attributes_command *attr_command)
 	attr_command->type = NULL;
 }
 
-void html5_attributes_del_reset(html5_attributes_del *attr_del)
+void html5_attributes_del_outset(html5_attributes_del *attr_del)
 {	
 	attr_del->cite = NULL;
 	attr_del->datetime = NULL;	
 }
 
-void html5_attributes_details_reset(html5_attributes_details *attr_details)
+void html5_attributes_details_outset(html5_attributes_details *attr_details)
 {
 	attr_details->open = NULL;
 	
 }
 
-void html5_attributes_embed_reset(html5_attributes_embed *attr_embed)
+void html5_attributes_embed_outset(html5_attributes_embed *attr_embed)
 {
 	attr_embed->height = NULL;
 	attr_embed->src = NULL;
@@ -2214,7 +2076,7 @@ void html5_attributes_embed_reset(html5_attributes_embed *attr_embed)
 	attr_embed->width = NULL;
 }
 
-void html5_attributes_fieldset_reset(html5_attributes_fieldset *attr_fieldset)
+void html5_attributes_fieldset_outset(html5_attributes_fieldset *attr_fieldset)
 {
 	attr_fieldset->disabled = NULL;
 	attr_fieldset->form = NULL;
@@ -2222,7 +2084,7 @@ void html5_attributes_fieldset_reset(html5_attributes_fieldset *attr_fieldset)
 	
 }
 
-void html5_attributes_form_reset(html5_attributes_form *attr_form)
+void html5_attributes_form_outset(html5_attributes_form *attr_form)
 {	
 	attr_form->accept = NULL;
 	attr_form->accept_charset = NULL;
@@ -2235,14 +2097,14 @@ void html5_attributes_form_reset(html5_attributes_form *attr_form)
 	attr_form->target = NULL;	
 }
 
-void html5_attributes_html_reset(html5_attributes_html *attr_html)
+void html5_attributes_html_outset(html5_attributes_html *attr_html)
 {
 	attr_html->manifest = NULL;
 	attr_html->xmlns = NULL;
 	
 }
 
-void html5_attributes_iframe_reset(html5_attributes_iframe *attr_iframe)
+void html5_attributes_iframe_outset(html5_attributes_iframe *attr_iframe)
 {
 	attr_iframe->height = NULL;
 	attr_iframe->name = NULL;
@@ -2253,7 +2115,7 @@ void html5_attributes_iframe_reset(html5_attributes_iframe *attr_iframe)
 	attr_iframe->width = NULL;
 }
 
-void html5_attributes_img_reset(html5_attributes_img *attr_img)
+void html5_attributes_img_outset(html5_attributes_img *attr_img)
 {
 	attr_img->alt = NULL;
 	attr_img->height = NULL;
@@ -2264,7 +2126,7 @@ void html5_attributes_img_reset(html5_attributes_img *attr_img)
 	attr_img->width = NULL;
 }
 
-void html5_attributes_input_reset(html5_attributes_input *attr_input)
+void html5_attributes_input_outset(html5_attributes_input *attr_input)
 {
 	attr_input->accept = NULL;
 	attr_input->alt = NULL;
@@ -2298,14 +2160,14 @@ void html5_attributes_input_reset(html5_attributes_input *attr_input)
 
 }
 
-void html5_attributes_ins_reset(html5_attributes_ins *attr_ins)
+void html5_attributes_ins_outset(html5_attributes_ins *attr_ins)
 {
 	attr_ins->cite = NULL;
 	attr_ins->datetime = NULL;
 	
 }
 
-void html5_attributes_keygen_reset(html5_attributes_keygen *attr_keygen)
+void html5_attributes_keygen_outset(html5_attributes_keygen *attr_keygen)
 {
 	attr_keygen->autofocus = NULL;
 	attr_keygen->challenge = NULL;
@@ -2315,19 +2177,19 @@ void html5_attributes_keygen_reset(html5_attributes_keygen *attr_keygen)
 	attr_keygen->name = NULL;
 }
 
-void html5_attributes_label_reset(html5_attributes_label *attr_label)
+void html5_attributes_label_outset(html5_attributes_label *attr_label)
 {
 	attr_label->for_ = NULL;
 	attr_label->form = NULL;
 	
 }
 
-void html5_attributes_li_reset(html5_attributes_li *attr_li)
+void html5_attributes_li_outset(html5_attributes_li *attr_li)
 {
 	attr_li->value = NULL;
 }
 
-void html5_attributes_link_reset(html5_attributes_link *attr_link)
+void html5_attributes_link_outset(html5_attributes_link *attr_link)
 {
 	attr_link->href = NULL;
 	attr_link->hreflang = NULL;
@@ -2337,19 +2199,19 @@ void html5_attributes_link_reset(html5_attributes_link *attr_link)
 	attr_link->type = NULL;	
 }
 
-void html5_attributes_map_reset(html5_attributes_map *attr_map)
+void html5_attributes_map_outset(html5_attributes_map *attr_map)
 {
 	attr_map->name = NULL;
 }
 
-void html5_attributes_menu_reset(html5_attributes_menu *attr_menu)
+void html5_attributes_menu_outset(html5_attributes_menu *attr_menu)
 {
 	attr_menu->label = NULL;
 	attr_menu->type = NULL;
 	
 }
 
-void html5_attributes_meta_reset(html5_attributes_meta *attr_meta)
+void html5_attributes_meta_outset(html5_attributes_meta *attr_meta)
 {
 	attr_meta->charset = NULL;
 	attr_meta->content = NULL;
@@ -2359,7 +2221,7 @@ void html5_attributes_meta_reset(html5_attributes_meta *attr_meta)
 	
 }
 
-void html5_attributes_meter_reset(html5_attributes_meter *attr_meter)
+void html5_attributes_meter_outset(html5_attributes_meter *attr_meter)
 {
 	attr_meter->form = NULL;
 	attr_meter->high = NULL;
@@ -2370,7 +2232,7 @@ void html5_attributes_meter_reset(html5_attributes_meter *attr_meter)
 	attr_meter->value = NULL;	
 }
 
-void html5_attributes_object_reset(html5_attributes_object *attr_object)
+void html5_attributes_object_outset(html5_attributes_object *attr_object)
 {
 	attr_object->data = NULL;
 	attr_object->form = NULL;
@@ -2382,7 +2244,7 @@ void html5_attributes_object_reset(html5_attributes_object *attr_object)
 	
 }
 
-void html5_attributes_ol_reset(html5_attributes_ol *attr_ol)
+void html5_attributes_ol_outset(html5_attributes_ol *attr_ol)
 {
 	attr_ol->reversed = NULL;
 	attr_ol->start = NULL;
@@ -2390,14 +2252,14 @@ void html5_attributes_ol_reset(html5_attributes_ol *attr_ol)
 	
 }
 
-void html5_attributes_optgroup_reset(html5_attributes_optgroup *attr_optgroup)
+void html5_attributes_optgroup_outset(html5_attributes_optgroup *attr_optgroup)
 {
 	attr_optgroup->disabled = NULL;
 	attr_optgroup->label = NULL;
 	
 }
 
-void html5_attributes_option_reset(html5_attributes_option *attr_option)
+void html5_attributes_option_outset(html5_attributes_option *attr_option)
 {
 	attr_option->disabled = NULL;
 	attr_option->label= NULL;
@@ -2406,7 +2268,7 @@ void html5_attributes_option_reset(html5_attributes_option *attr_option)
 	
 }
 
-void html5_attributes_output_reset(html5_attributes_output *attr_output)
+void html5_attributes_output_outset(html5_attributes_output *attr_output)
 {
 	attr_output->for_ = NULL;
 	attr_output->form = NULL;
@@ -2414,27 +2276,27 @@ void html5_attributes_output_reset(html5_attributes_output *attr_output)
 	
 }
 
-void html5_attributes_param_reset(html5_attributes_param *attr_param)
+void html5_attributes_param_outset(html5_attributes_param *attr_param)
 {
 	attr_param->name = NULL;
 	attr_param->value = NULL;
 	
 }
 
-void html5_attributes_progress_reset(html5_attributes_progress *attr_progress)
+void html5_attributes_progress_outset(html5_attributes_progress *attr_progress)
 {
 	attr_progress->max = NULL;
 	attr_progress->value = NULL;
 	
 }
 
-void html5_attributes_q_reset(html5_attributes_q *attr_q)
+void html5_attributes_q_outset(html5_attributes_q *attr_q)
 {
 	attr_q->cite = NULL;
 	
 }
 
-void html5_attributes_script_reset(html5_attributes_script *attr_script)
+void html5_attributes_script_outset(html5_attributes_script *attr_script)
 {	
 	attr_script->async = NULL;
 	attr_script->charset = NULL;
@@ -2444,7 +2306,7 @@ void html5_attributes_script_reset(html5_attributes_script *attr_script)
 
 }
 
-void html5_attributes_select_reset(html5_attributes_select *attr_select)
+void html5_attributes_select_outset(html5_attributes_select *attr_select)
 {
 	attr_select->autofocus = NULL;
 	attr_select->disabled = NULL;
@@ -2454,7 +2316,7 @@ void html5_attributes_select_reset(html5_attributes_select *attr_select)
 	attr_select->size = NULL;
 }
 
-void html5_attributes_source_reset(html5_attributes_source *attr_source)
+void html5_attributes_source_outset(html5_attributes_source *attr_source)
 {
 	attr_source->media = NULL;
 	attr_source->src = NULL;
@@ -2462,7 +2324,7 @@ void html5_attributes_source_reset(html5_attributes_source *attr_source)
 	
 }
 
-void html5_attributes_style_reset(html5_attributes_style *attr_style)
+void html5_attributes_style_outset(html5_attributes_style *attr_style)
 {
 	attr_style->media = NULL;
 	attr_style->scorped = NULL;
@@ -2470,13 +2332,13 @@ void html5_attributes_style_reset(html5_attributes_style *attr_style)
 	
 }
 
-void html5_attributes_table_reset(html5_attributes_table *attr_table)
+void html5_attributes_table_outset(html5_attributes_table *attr_table)
 {
 	attr_table->border = NULL;
 	
 }
 
-void html5_attributes_td_reset(html5_attributes_td *attr_td)
+void html5_attributes_td_outset(html5_attributes_td *attr_td)
 {
 	attr_td->colspan = NULL;
 	attr_td->headers = NULL;
@@ -2484,7 +2346,7 @@ void html5_attributes_td_reset(html5_attributes_td *attr_td)
 	
 }
 
-void html5_attributes_textarea_reset(html5_attributes_textarea *attr_textarea)
+void html5_attributes_textarea_outset(html5_attributes_textarea *attr_textarea)
 {
 	attr_textarea->autofocus = NULL;
 	attr_textarea->cols = NULL;
@@ -2499,7 +2361,7 @@ void html5_attributes_textarea_reset(html5_attributes_textarea *attr_textarea)
 	attr_textarea->wrap = NULL;
 }
 
-void html5_attributes_th_reset(html5_attributes_th *attr_th)
+void html5_attributes_th_outset(html5_attributes_th *attr_th)
 {
 	attr_th->colspan = NULL;
 	attr_th->headers = NULL;
@@ -2508,14 +2370,14 @@ void html5_attributes_th_reset(html5_attributes_th *attr_th)
 
 }
 
-void html5_attributes_time_reset(html5_attributes_time *attr_time)
+void html5_attributes_time_outset(html5_attributes_time *attr_time)
 {
 	attr_time->datetime = NULL;
 	attr_time->pubdate = NULL;
 		
 }
 
-void html5_attributes_track_reset(html5_attributes_track *attr_track)
+void html5_attributes_track_outset(html5_attributes_track *attr_track)
 {
 	attr_track->default_ = NULL;
 	attr_track->kind = NULL;
@@ -2525,7 +2387,8 @@ void html5_attributes_track_reset(html5_attributes_track *attr_track)
 	
 }
 
-void html5_attributes_video_reset(html5_attributes_video *attr_video)
+
+void html5_attributes_video_outset(html5_attributes_video *attr_video)
 {
 	attr_video->autoplay = NULL;
 	attr_video->controls = NULL;
@@ -2539,505 +2402,6 @@ void html5_attributes_video_reset(html5_attributes_video *attr_video)
 	
 }
 
-void html5_init_attributes_a(html5_attributes_a  **attr_a)
-{
-	*attr_a = malloc(sizeof **attr_a);
-
-	ASSERT(attr_a);
-	
-	html5_attributes_a_reset(*attr_a);
-
-}
-
-
-void html5_init_attributes_area(html5_attributes_area  **attr_area)
-{
-	*attr_area = malloc(sizeof **attr_area);
-
-	ASSERT(attr_area);
-	
-	html5_attributes_area_reset(*attr_area);
-
-}
-
-void html5_init_attributes_audio(html5_attributes_audio  **attr_audio)
-{
-	*attr_audio = malloc(sizeof **attr_audio);
-
-	ASSERT(attr_audio);
-	
-	html5_attributes_audio_reset(*attr_audio);
-
-}
-
-void html5_init_attributes_base(html5_attributes_base  **attr_base)
-{
-	*attr_base = malloc(sizeof **attr_base);
-
-	ASSERT(attr_base);
-	
-	html5_attributes_base_reset(*attr_base);
-
-}
-
-void html5_init_attributes_bdo(html5_attributes_bdo  **attr_bdo)
-{
-	*attr_bdo = malloc(sizeof **attr_bdo);
-
-	ASSERT(attr_bdo);
-	
-	html5_attributes_bdo_reset(*attr_bdo);
-
-}
-
-void html5_init_attributes_blockquote(html5_attributes_blockquote  **attr_blockquote)
-{
-	*attr_blockquote = malloc(sizeof **attr_blockquote);
-
-	ASSERT(attr_blockquote);
-	
-	html5_attributes_blockquote_reset(*attr_blockquote);
-
-}
-
-void html5_init_attributes_body(html5_attributes_body  **attr_body)
-{
-	*attr_body = malloc(sizeof **attr_body);
-
-	ASSERT(attr_body);
-	
-	html5_attributes_body_reset(*attr_body);
-
-}
-
-void html5_init_attributes_button(html5_attributes_button  **attr_button)
-{
-	*attr_button = malloc(sizeof **attr_button);
-
-	ASSERT(attr_button);
-	
-	html5_attributes_button_reset(*attr_button);
-
-}
-
-void html5_init_attributes_canvas(html5_attributes_canvas  **attr_canvas)
-{
-	*attr_canvas = malloc(sizeof **attr_canvas);
-
-	ASSERT(attr_canvas);
-	
-	html5_attributes_canvas_reset(*attr_canvas);
-
-}
-
-void html5_init_attributes_col(html5_attributes_col  **attr_col)
-{
-	*attr_col = malloc(sizeof **attr_col);
-
-	ASSERT(attr_col);
-	
-	html5_attributes_col_reset(*attr_col);
-
-}
-
-void html5_init_attributes_colgroup(html5_attributes_colgroup  **attr_colgroup)
-{
-	*attr_colgroup = malloc(sizeof **attr_colgroup);
-
-	ASSERT(attr_colgroup);
-	
-	html5_attributes_colgroup_reset(*attr_colgroup);
-
-}
-
-void html5_init_attributes_command(html5_attributes_command  **attr_command)
-{
-	*attr_command = malloc(sizeof **attr_command);
-
-	ASSERT(attr_command);
-	
-	html5_attributes_command_reset(*attr_command);
-
-}
-
-void html5_init_attributes_del(html5_attributes_del  **attr_del)
-{
-	*attr_del = malloc(sizeof **attr_del);
-
-	ASSERT(attr_del);
-	
-	html5_attributes_del_reset(*attr_del);
-
-}
-
-void html5_init_attributes_details(html5_attributes_details  **attr_details)
-{
-	*attr_details = malloc(sizeof **attr_details);
-
-	ASSERT(attr_details);
-	
-	html5_attributes_details_reset(*attr_details);
-
-}
-
-void html5_init_attributes_embed(html5_attributes_embed  **attr_embed)
-{
-	*attr_embed = malloc(sizeof **attr_embed);
-
-	ASSERT(attr_embed);
-	
-	html5_attributes_embed_reset(*attr_embed);
-
-}
-
-void html5_init_attributes_fieldset(html5_attributes_fieldset  **attr_fieldset)
-{
-	*attr_fieldset = malloc(sizeof **attr_fieldset);
-
-	ASSERT(attr_fieldset);
-	
-	html5_attributes_fieldset_reset(*attr_fieldset);
-
-}
-
-void html5_init_attributes_form(html5_attributes_form  **attr_form)
-{
-	*attr_form = malloc(sizeof **attr_form);
-
-	ASSERT(attr_form);
-	
-	html5_attributes_form_reset(*attr_form);
-
-}
-
-void html5_init_attributes_html(html5_attributes_html  **attr_html)
-{
-	*attr_html = malloc(sizeof **attr_html);
-
-	ASSERT(attr_html);
-	
-	html5_attributes_html_reset(*attr_html);
-
-}
-
-void html5_init_attributes_iframe(html5_attributes_iframe  **attr_iframe)
-{
-	*attr_iframe = malloc(sizeof **attr_iframe);
-
-	ASSERT(attr_iframe);
-	
-	html5_attributes_iframe_reset(*attr_iframe);
-
-}
-
-void html5_init_attributes_img(html5_attributes_img  **attr_img)
-{
-	*attr_img = malloc(sizeof **attr_img);
-
-	ASSERT(attr_img);
-	
-	html5_attributes_img_reset(*attr_img);
-
-}
-
-void html5_init_attributes_input(html5_attributes_input  **attr_input)
-{
-	*attr_input = malloc(sizeof **attr_input);
-
-	ASSERT(attr_input);
-	
-	html5_attributes_input_reset(*attr_input);
-
-}
-
-void html5_init_attributes_ins(html5_attributes_ins  **attr_ins)
-{
-	*attr_ins = malloc(sizeof **attr_ins);
-
-	ASSERT(attr_ins);
-	
-	html5_attributes_ins_reset(*attr_ins);
-
-}
-
-void html5_init_attributes_keygen(html5_attributes_keygen  **attr_keygen)
-{
-	*attr_keygen = malloc(sizeof **attr_keygen);
-
-	ASSERT(attr_keygen);
-	
-	html5_attributes_keygen_reset(*attr_keygen);
-
-}
-
-void html5_init_attributes_label(html5_attributes_label  **attr_label)
-{
-	*attr_label = malloc(sizeof **attr_label);
-
-	ASSERT(attr_label);
-	
-	html5_attributes_label_reset(*attr_label);
-
-}
-
-void html5_init_attributes_li(html5_attributes_li  **attr_li)
-{
-	*attr_li = malloc(sizeof **attr_li);
-
-	ASSERT(attr_li);
-	
-	html5_attributes_li_reset(*attr_li);
-
-}
-
-void html5_init_attributes_link(html5_attributes_link  **attr_link)
-{
-	*attr_link = malloc(sizeof **attr_link);
-
-	ASSERT(attr_link);
-	
-	html5_attributes_link_reset(*attr_link);
-
-}
-
-void html5_init_attributes_map(html5_attributes_map  **attr_map)
-{
-	*attr_map = malloc(sizeof **attr_map);
-
-	ASSERT(attr_map);
-	
-	html5_attributes_map_reset(*attr_map);
-
-}
-
-void html5_init_attributes_menu(html5_attributes_menu  **attr_menu)
-{
-	*attr_menu = malloc(sizeof **attr_menu);
-
-	ASSERT(attr_menu);
-	
-	html5_attributes_menu_reset(*attr_menu);
-
-}
-
-void html5_init_attributes_meta(html5_attributes_meta  **attr_meta)
-{
-	*attr_meta = malloc(sizeof **attr_meta);
-
-	ASSERT(attr_meta);
-	
-	html5_attributes_meta_reset(*attr_meta);
-
-}
-
-void html5_init_attributes_meter(html5_attributes_meter  **attr_meter)
-{
-	*attr_meter = malloc(sizeof **attr_meter);
-
-	ASSERT(attr_meter);
-	
-	html5_attributes_meter_reset(*attr_meter);
-
-}
-
-void html5_init_attributes_object(html5_attributes_object  **attr_object)
-{
-	*attr_object = malloc(sizeof **attr_object);
-
-	ASSERT(attr_object);
-	
-	html5_attributes_object_reset(*attr_object);
-
-}
-
-void html5_init_attributes_ol(html5_attributes_ol  **attr_ol)
-{
-	*attr_ol = malloc(sizeof **attr_ol);
-
-	ASSERT(attr_ol);
-	
-	html5_attributes_ol_reset(*attr_ol);
-
-}
-
-void html5_init_attributes_optgroup(html5_attributes_optgroup  **attr_optgroup)
-{
-	*attr_optgroup = malloc(sizeof **attr_optgroup);
-
-	ASSERT(attr_optgroup);
-	
-	html5_attributes_optgroup_reset(*attr_optgroup);
-
-}
-
-void html5_init_attributes_option(html5_attributes_option  **attr_option)
-{
-	*attr_option = malloc(sizeof **attr_option);
-
-	ASSERT(attr_option);
-	
-	html5_attributes_option_reset(*attr_option);
-
-}
-
-void html5_init_attributes_output(html5_attributes_output  **attr_output)
-{
-	*attr_output = malloc(sizeof **attr_output);
-
-	ASSERT(attr_output);
-	
-	html5_attributes_output_reset(*attr_output);
-
-}
-
-void html5_init_attributes_param(html5_attributes_param  **attr_param)
-{
-	*attr_param = malloc(sizeof **attr_param);
-
-	ASSERT(attr_param);
-	
-	html5_attributes_param_reset(*attr_param);
-
-}
-
-void html5_init_attributes_progress(html5_attributes_progress  **attr_progress)
-{
-	*attr_progress = malloc(sizeof **attr_progress);
-
-	ASSERT(attr_progress);
-	
-	html5_attributes_progress_reset(*attr_progress);
-
-}
-
-void html5_init_attributes_q(html5_attributes_q  **attr_q)
-{
-	*attr_q = malloc(sizeof **attr_q);
-
-	ASSERT(attr_q);
-	
-	html5_attributes_q_reset(*attr_q);
-
-}
-
-void html5_init_attributes_script(html5_attributes_script  **attr_script)
-{
-	*attr_script = malloc(sizeof **attr_script);
-
-	ASSERT(attr_script);
-	
-	html5_attributes_script_reset(*attr_script);
-
-}
-
-void html5_init_attributes_select(html5_attributes_select  **attr_select)
-{
-	*attr_select = malloc(sizeof **attr_select);
-
-	ASSERT(attr_select);
-	
-	html5_attributes_select_reset(*attr_select);
-
-}
-
-void html5_init_attributes_source(html5_attributes_source  **attr_source)
-{
-	*attr_source = malloc(sizeof **attr_source);
-
-	ASSERT(attr_source);
-	
-	html5_attributes_source_reset(*attr_source);
-
-}
-
-void html5_init_attributes_style(html5_attributes_style  **attr_style)
-{
-	*attr_style = malloc(sizeof **attr_style);
-
-	ASSERT(attr_style);
-	
-	html5_attributes_style_reset(*attr_style);
-
-}
-
-void html5_init_attributes_table(html5_attributes_table  **attr_table)
-{
-	*attr_table = malloc(sizeof **attr_table);
-
-	ASSERT(attr_table);
-	
-	html5_attributes_table_reset(*attr_table);
-
-}
-
-void html5_init_attributes_td(html5_attributes_td  **attr_td)
-{
-	*attr_td = malloc(sizeof **attr_td);
-
-	ASSERT(attr_td);
-	
-	html5_attributes_td_reset(*attr_td);
-
-}
-
-void html5_init_attributes_textarea(html5_attributes_textarea  **attr_textarea)
-{
-	*attr_textarea = malloc(sizeof **attr_textarea);
-
-	ASSERT(attr_textarea);
-	
-	html5_attributes_textarea_reset(*attr_textarea);
-
-}
-
-void html5_init_attributes_th(html5_attributes_th  **attr_th)
-{
-	*attr_th = malloc(sizeof **attr_th);
-
-	ASSERT(attr_th);
-	
-	html5_attributes_th_reset(*attr_th);
-
-}
-
-void html5_init_attributes_time(html5_attributes_time  **attr_time)
-{
-	*attr_time = malloc(sizeof **attr_time);
-
-	ASSERT(attr_time);
-	
-	html5_attributes_time_reset(*attr_time);
-
-}
-
-void html5_init_attributes_track(html5_attributes_track  **attr_track)
-{
-	*attr_track = malloc(sizeof **attr_track);
-
-	ASSERT(attr_track);
-	
-	html5_attributes_track_reset(*attr_track);
-
-}
-
-void html5_init_attributes_video(html5_attributes_video  **attr_video)
-{
-	*attr_video = malloc(sizeof **attr_video);
-
-	ASSERT(attr_video);
-	
-	html5_attributes_video_reset(*attr_video);
-
-}
-
-
-
-
-
-
-
-
-
 
 void html5_doctype(void)
 {
@@ -3049,15 +2413,6 @@ void html5_comment(const char *comment)
 	fprintf(stdout, "<!-- %s -->\012", comment);
 }
 
-void html5_tag_(const char *tagname, html5_attributes_global *gattr, html5_event_attributes *event_attr)
-{
-	printf("<%s", (char *)tagname);
-	
-	html5_render_attributes_global(gattr);
-	html5_render_event_attributes(event_attr);
-	
-	printf(">");
-}
 
 void html5_tag_end(const char *tagname)
 {

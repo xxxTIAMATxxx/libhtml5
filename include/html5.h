@@ -112,7 +112,6 @@ typedef struct
 typedef struct
 {
 	char everything;
-	
 	html5_event_attributes_form *event_attr_form;
 	html5_event_attributes_media *event_attr_media;
 	html5_event_attributes_mouse *event_attr_mouse;
@@ -127,7 +126,6 @@ typedef struct
 	char *rel;
 	char *target;
 	char *type;
-	
 	char *_ext; //for custom attributes or extra attributes
 }html5_attributes_a;
 
@@ -544,9 +542,14 @@ typedef struct
 	char *width;
 }html5_attributes_video;
 
+
+//tools
+extern void html5_tag_end(const char *tagname);
+
+
+//html5
 extern void html5_doctype(void);
 extern void html5_comment(const char *comment);
-
 extern void html5_acronym(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
 extern void html5_address(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
 extern void html5_applet(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
@@ -617,7 +620,6 @@ extern void html5_u(html5_attributes_global *html5_attr_global, html5_event_attr
 extern void html5_ul(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
 extern void html5_var(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
 extern void html5_wbr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event);
-
 extern void html5_a(html5_attributes_global *html5_attr_global, html5_attributes_a *html5_attr_a, html5_event_attributes *html5_event_attr);
 // extern void html5_abbr(html5_attributes_global *html5_attr_global, html5_attributes_abbr *html5_attr_abbr, html5_event_attributes *html5_event_attr);
 extern void html5_area(html5_attributes_global *html5_attr_global, html5_attributes_area *html5_attr_area, html5_event_attributes *html5_event_attr);
@@ -669,120 +671,65 @@ extern void html5_time(html5_attributes_global *html5_attr_global, html5_attribu
 extern void html5_track(html5_attributes_global *html5_attr_global, html5_attributes_track *html5_attr_track, html5_event_attributes *html5_event_attr);
 extern void html5_video(html5_attributes_global *html5_attr_global, html5_attributes_video *html5_attr_video, html5_event_attributes *html5_event_attr);
 
-extern void html5_tag_(const char *tagname, html5_attributes_global *gattr, html5_event_attributes *event_attr);
-extern void html5_tag_end(const char *tagname);
 
-extern void html5_attribute_reset(html5_attributes_global *html5_attr_global);
-extern void html5_attribute_body_reset(html5_attributes_body *html5_attr_body);
-extern void html5_attributes_a_reset(html5_attributes_a *attr_a);
-// extern void html5_attributes_abbr_reset(html5_attributes_abbr *attr_abbr);
-extern void html5_attributes_area_reset(html5_attributes_area *attr_area);
-extern void html5_attributes_audio_reset(html5_attributes_audio *attr_audio);
-extern void html5_attributes_base_reset(html5_attributes_base *attr_base);
-extern void html5_attributes_bdo_reset(html5_attributes_bdo *attr_bdo);
-extern void html5_attributes_blockquote_reset(html5_attributes_blockquote *attr_blockquote);
-extern void html5_attributes_body_reset(html5_attributes_body *attr_body);
-extern void html5_attributes_button_reset(html5_attributes_button *attr_button);
-extern void html5_attributes_canvas_reset(html5_attributes_canvas *attr_canvas);
-extern void html5_attributes_col_reset(html5_attributes_col *attr_col);
-extern void html5_attributes_colgroup_reset(html5_attributes_colgroup *attr_colgroup);
-extern void html5_attributes_command_reset(html5_attributes_command *attr_command);
-extern void html5_attributes_del_reset(html5_attributes_del *attr_del);
-extern void html5_attributes_details_reset(html5_attributes_details *attr_details);
-extern void html5_attributes_embed_reset(html5_attributes_embed *attr_embed);
-extern void html5_attributes_fieldset_reset(html5_attributes_fieldset *attr_fieldset);
-extern void html5_attributes_form_reset(html5_attributes_form *attr_form);
-extern void html5_attributes_html_reset(html5_attributes_html *attr_html);
-extern void html5_attributes_iframe_reset(html5_attributes_iframe *attr_iframe);
-extern void html5_attributes_img_reset(html5_attributes_img *attr_img);
-extern void html5_attributes_input_reset(html5_attributes_input *attr_input);
-extern void html5_attributes_ins_reset(html5_attributes_ins *attr_ins);
-extern void html5_attributes_keygen_reset(html5_attributes_keygen *attr_keygen);
-extern void html5_attributes_label_reset(html5_attributes_label *attr_label);
-extern void html5_attributes_li_reset(html5_attributes_li *attr_li);
-extern void html5_attributes_link_reset(html5_attributes_link *attr_link);
-extern void html5_attributes_map_reset(html5_attributes_map *attr_map);
-extern void html5_attributes_menu_reset(html5_attributes_menu *attr_menu);
-extern void html5_attributes_meta_reset(html5_attributes_meta *attr_meta);
-extern void html5_attributes_meter_reset(html5_attributes_meter *attr_meter);
-extern void html5_attributes_object_reset(html5_attributes_object *attr_object);
-extern void html5_attributes_ol_reset(html5_attributes_ol *attr_ol);
-extern void html5_attributes_optgroup_reset(html5_attributes_optgroup *attr_optgroup);
-extern void html5_attributes_option_reset(html5_attributes_option *attr_option);
-extern void html5_attributes_output_reset(html5_attributes_output *attr_output);
-extern void html5_attributes_param_reset(html5_attributes_param *attr_param);
-extern void html5_attributes_progress_reset(html5_attributes_progress *attr_progress);
-extern void html5_attributes_q_reset(html5_attributes_q *attr_q);
-extern void html5_attributes_script_reset(html5_attributes_script *attr_script);
-extern void html5_attributes_select_reset(html5_attributes_select *attr_select);
-extern void html5_attributes_source_reset(html5_attributes_source *attr_source);
-extern void html5_attributes_style_reset(html5_attributes_style *attr_style);
-extern void html5_attributes_table_reset(html5_attributes_table *attr_table);
-extern void html5_attributes_td_reset(html5_attributes_td *attr_td);
-extern void html5_attributes_textarea_reset(html5_attributes_textarea *attr_textarea);
-extern void html5_attributes_th_reset(html5_attributes_th *attr_th);
-extern void html5_attributes_time_reset(html5_attributes_time *attr_time);
-extern void html5_attributes_track_reset(html5_attributes_track *attr_track);
-extern void html5_attributes_video_reset(html5_attributes_video *attr_video);
+//outset attributes
+extern void html5_attribute_global_outset(html5_attributes_global *html5_attr_global);
+extern void html5_attribute_body_outset(html5_attributes_body *html5_attr_body);
+extern void html5_attributes_a_outset(html5_attributes_a *attr_a);
+// extern void html5_attributes_abbr_outset(html5_attributes_abbr *attr_abbr);
+extern void html5_attributes_area_outset(html5_attributes_area *attr_area);
+extern void html5_attributes_audio_outset(html5_attributes_audio *attr_audio);
+extern void html5_attributes_base_outset(html5_attributes_base *attr_base);
+extern void html5_attributes_bdo_outset(html5_attributes_bdo *attr_bdo);
+extern void html5_attributes_blockquote_outset(html5_attributes_blockquote *attr_blockquote);
+extern void html5_attributes_body_outset(html5_attributes_body *attr_body);
+extern void html5_attributes_button_outset(html5_attributes_button *attr_button);
+extern void html5_attributes_canvas_outset(html5_attributes_canvas *attr_canvas);
+extern void html5_attributes_col_outset(html5_attributes_col *attr_col);
+extern void html5_attributes_colgroup_outset(html5_attributes_colgroup *attr_colgroup);
+extern void html5_attributes_command_outset(html5_attributes_command *attr_command);
+extern void html5_attributes_del_outset(html5_attributes_del *attr_del);
+extern void html5_attributes_details_outset(html5_attributes_details *attr_details);
+extern void html5_attributes_embed_outset(html5_attributes_embed *attr_embed);
+extern void html5_attributes_fieldset_outset(html5_attributes_fieldset *attr_fieldset);
+extern void html5_attributes_form_outset(html5_attributes_form *attr_form);
+extern void html5_attributes_html_outset(html5_attributes_html *attr_html);
+extern void html5_attributes_iframe_outset(html5_attributes_iframe *attr_iframe);
+extern void html5_attributes_img_outset(html5_attributes_img *attr_img);
+extern void html5_attributes_input_outset(html5_attributes_input *attr_input);
+extern void html5_attributes_ins_outset(html5_attributes_ins *attr_ins);
+extern void html5_attributes_keygen_outset(html5_attributes_keygen *attr_keygen);
+extern void html5_attributes_label_outset(html5_attributes_label *attr_label);
+extern void html5_attributes_li_outset(html5_attributes_li *attr_li);
+extern void html5_attributes_link_outset(html5_attributes_link *attr_link);
+extern void html5_attributes_map_outset(html5_attributes_map *attr_map);
+extern void html5_attributes_menu_outset(html5_attributes_menu *attr_menu);
+extern void html5_attributes_meta_outset(html5_attributes_meta *attr_meta);
+extern void html5_attributes_meter_outset(html5_attributes_meter *attr_meter);
+extern void html5_attributes_object_outset(html5_attributes_object *attr_object);
+extern void html5_attributes_ol_outset(html5_attributes_ol *attr_ol);
+extern void html5_attributes_optgroup_outset(html5_attributes_optgroup *attr_optgroup);
+extern void html5_attributes_option_outset(html5_attributes_option *attr_option);
+extern void html5_attributes_output_outset(html5_attributes_output *attr_output);
+extern void html5_attributes_param_outset(html5_attributes_param *attr_param);
+extern void html5_attributes_progress_outset(html5_attributes_progress *attr_progress);
+extern void html5_attributes_q_outset(html5_attributes_q *attr_q);
+extern void html5_attributes_script_outset(html5_attributes_script *attr_script);
+extern void html5_attributes_select_outset(html5_attributes_select *attr_select);
+extern void html5_attributes_source_outset(html5_attributes_source *attr_source);
+extern void html5_attributes_style_outset(html5_attributes_style *attr_style);
+extern void html5_attributes_table_outset(html5_attributes_table *attr_table);
+extern void html5_attributes_td_outset(html5_attributes_td *attr_td);
+extern void html5_attributes_textarea_outset(html5_attributes_textarea *attr_textarea);
+extern void html5_attributes_th_outset(html5_attributes_th *attr_th);
+extern void html5_attributes_time_outset(html5_attributes_time *attr_time);
+extern void html5_attributes_track_outset(html5_attributes_track *attr_track);
+extern void html5_attributes_video_outset(html5_attributes_video *attr_video);
 
-extern void html5_event_attributes_reset(html5_event_attributes *evattr);
-extern void html5_event_attribute_form_reset(html5_event_attributes_form *event_attr_form);
-extern void html5_event_attribute_media_reset(html5_event_attributes_media *event_attr_media);
-extern void html5_event_attribute_mouse_reset(html5_event_attributes_mouse *event_attr_mouse);
-extern void html5_event_attribute_window_reset(html5_event_attributes_window *event_attr_window);
+extern void html5_event_attributes_outset(html5_event_attributes *evattr);
+extern void html5_event_attribute_form_outset(html5_event_attributes_form *event_attr_form);
+extern void html5_event_attribute_media_outset(html5_event_attributes_media *event_attr_media);
+extern void html5_event_attribute_mouse_outset(html5_event_attributes_mouse *event_attr_mouse);
+extern void html5_event_attribute_window_outset(html5_event_attributes_window *event_attr_window);
 
-
-extern void html5_init_attributes_a(html5_attributes_a  **attr_a);
-extern void html5_init_attribute_body(html5_attributes_body **body);
-// extern void html5_init_attributes_abbr(html5_attributes_abbr  **attr_abbr);
-extern void html5_init_event_attributes(html5_event_attributes **event_attr, char event_flags);
-extern void html5_init_attributes_global(html5_attributes_global **html5_attr_global);
-extern void html5_init_attributes_area(html5_attributes_area  **attr_area);
-extern void html5_init_attributes_audio(html5_attributes_audio  **attr_audio);
-extern void html5_init_attributes_base(html5_attributes_base  **attr_base);
-extern void html5_init_attributes_bdo(html5_attributes_bdo  **attr_bdo);
-extern void html5_init_attributes_blockquote(html5_attributes_blockquote  **attr_blockquote);
-extern void html5_init_attributes_body(html5_attributes_body  **attr_body);
-extern void html5_init_attributes_button(html5_attributes_button  **attr_button);
-extern void html5_init_attributes_canvas(html5_attributes_canvas  **attr_canvas);
-extern void html5_init_attributes_col(html5_attributes_col  **attr_col);
-extern void html5_init_attributes_colgroup(html5_attributes_colgroup  **attr_colgroup);
-extern void html5_init_attributes_command(html5_attributes_command  **attr_command);
-extern void html5_init_attributes_del(html5_attributes_del  **attr_del);
-extern void html5_init_attributes_details(html5_attributes_details  **attr_details);
-extern void html5_init_attributes_embed(html5_attributes_embed  **attr_embed);
-extern void html5_init_attributes_fieldset(html5_attributes_fieldset  **attr_fieldset);
-extern void html5_init_attributes_form(html5_attributes_form  **attr_form);
-extern void html5_init_attributes_html(html5_attributes_html  **attr_html);
-extern void html5_init_attributes_iframe(html5_attributes_iframe  **attr_iframe);
-extern void html5_init_attributes_img(html5_attributes_img  **attr_img);
-extern void html5_init_attributes_input(html5_attributes_input  **attr_input);
-extern void html5_init_attributes_ins(html5_attributes_ins  **attr_ins);
-extern void html5_init_attributes_keygen(html5_attributes_keygen  **attr_keygen);
-extern void html5_init_attributes_label(html5_attributes_label  **attr_label);
-extern void html5_init_attributes_li(html5_attributes_li  **attr_li);
-extern void html5_init_attributes_link(html5_attributes_link  **attr_link);
-extern void html5_init_attributes_map(html5_attributes_map  **attr_map);
-extern void html5_init_attributes_menu(html5_attributes_menu  **attr_menu);
-extern void html5_init_attributes_meta(html5_attributes_meta  **attr_meta);
-extern void html5_init_attributes_meter(html5_attributes_meter  **attr_meter);
-extern void html5_init_attributes_object(html5_attributes_object  **attr_object);
-extern void html5_init_attributes_ol(html5_attributes_ol  **attr_ol);
-extern void html5_init_attributes_optgroup(html5_attributes_optgroup  **attr_optgroup);
-extern void html5_init_attributes_option(html5_attributes_option  **attr_option);
-extern void html5_init_attributes_output(html5_attributes_output  **attr_output);
-extern void html5_init_attributes_param(html5_attributes_param  **attr_param);
-extern void html5_init_attributes_progress(html5_attributes_progress  **attr_progress);
-extern void html5_init_attributes_q(html5_attributes_q  **attr_q);
-extern void html5_init_attributes_script(html5_attributes_script  **attr_script);
-extern void html5_init_attributes_select(html5_attributes_select  **attr_select);
-extern void html5_init_attributes_source(html5_attributes_source  **attr_source);
-extern void html5_init_attributes_style(html5_attributes_style  **attr_style);
-extern void html5_init_attributes_table(html5_attributes_table  **attr_table);
-extern void html5_init_attributes_td(html5_attributes_td  **attr_td);
-extern void html5_init_attributes_textarea(html5_attributes_textarea  **attr_textarea);
-extern void html5_init_attributes_th(html5_attributes_th  **attr_th);
-extern void html5_init_attributes_time(html5_attributes_time  **attr_time);
-extern void html5_init_attributes_track(html5_attributes_track  **attr_track);
-extern void html5_init_attributes_video(html5_attributes_video  **attr_video);
 #endif //HTML5_H

@@ -582,18 +582,11 @@ void html5_render_attributes_body(html5_attributes_body *attr_body)
 	}
 }
 
-void html5_attribute_body_outset(html5_attributes_body *html5_attr_body)
+void html5_attributes_body_outset(html5_attributes_body *html5_attr_body)
 {
 	html5_attr_body->manifest = NULL;
 	html5_attr_body->xmlns = NULL;
 }
-
-void html5_init_attribute_body(html5_attributes_body *body)
-{
-	html5_attribute_body_outset(body);
-}
-
-
 
 void html5_body(html5_attributes_global *html5_attr_global, html5_attributes_body *html5_attr_body, html5_event_attributes *html5_event_attr)
 {
@@ -606,7 +599,7 @@ void html5_body(html5_attributes_global *html5_attr_global, html5_attributes_bod
 	printf(">\n");
 }
 
-void html5_attribute_global_outset(html5_attributes_global *html5_attr_global)
+void html5_attributes_global_outset(html5_attributes_global *html5_attr_global)
 {
 	html5_attr_global->accesskey = NULL;
 	html5_attr_global->cssclass = NULL;
@@ -2005,12 +1998,6 @@ void html5_attributes_bdo_outset(html5_attributes_bdo *attr_bdo)
 void html5_attributes_blockquote_outset(html5_attributes_blockquote *attr_blockquote)
 {
 	attr_blockquote->cite = NULL;
-}
-
-void html5_attributes_body_outset(html5_attributes_body *attr_body)
-{
-	attr_body->manifest = NULL;
-	attr_body->xmlns = NULL;
 }
 
 void html5_attributes_button_outset(html5_attributes_button *attr_button)

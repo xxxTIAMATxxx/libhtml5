@@ -1,5 +1,5 @@
-#ifndef HTML5_H
-#define HTML5_H
+#ifndef __HTML5_H
+#define __HTML5_H
 
 #define HTML5_EVENT_INIT_EVERYTHING 0x00000001
 #define HTML5_EVENT_INIT_MEDIA 0x00000002
@@ -673,8 +673,8 @@ extern void html5_video(html5_attributes_global *html5_attr_global, html5_attrib
 
 
 //outset attributes
-extern void html5_attribute_global_outset(html5_attributes_global *html5_attr_global);
-extern void html5_attribute_body_outset(html5_attributes_body *html5_attr_body);
+extern void html5_attributes_global_outset(html5_attributes_global *html5_attr_global);
+extern void html5_attributes_body_outset(html5_attributes_body *html5_attr_body);
 extern void html5_attributes_a_outset(html5_attributes_a *attr_a);
 extern void html5_attributes_area_outset(html5_attributes_area *attr_area);
 extern void html5_attributes_audio_outset(html5_attributes_audio *attr_audio);
@@ -731,4 +731,4 @@ extern void html5_event_attribute_media_outset(html5_event_attributes_media *eve
 extern void html5_event_attribute_mouse_outset(html5_event_attributes_mouse *event_attr_mouse);
 extern void html5_event_attribute_window_outset(html5_event_attributes_window *event_attr_window);
 
-#endif //HTML5_H
+#endif // __HTML5_H

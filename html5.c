@@ -88,55 +88,55 @@ void html5_render_event_attributes_form(html5_event_attributes_form *event_form)
 {
 		if(event_form->onblur != NULL)
 		{
-			printf(" onblur=\"%s\"", event_form->onblur);
+			fprintf(stdout, " onblur=\"%s\"", event_form->onblur);
 		}
 
 		if(event_form->onchange != NULL)
 		{
-			printf(" onchange=\"%s\"", event_form->onchange);
+			fprintf(stdout, " onchange=\"%s\"", event_form->onchange);
 		}
 	
 		if(event_form->oncontextmenu != NULL)
 		{
-			printf(" oncontextmenu=\"%s\"", event_form->oncontextmenu);
+			fprintf(stdout, " oncontextmenu=\"%s\"", event_form->oncontextmenu);
 		}
 		
 		if(event_form->onfocus != NULL)
 		{
-			printf(" onfocus=\"%s\"", event_form->onfocus);
+			fprintf(stdout, " onfocus=\"%s\"", event_form->onfocus);
 		}
 
 		if(event_form->onforminput != NULL)
 		{
-			printf(" onforminput=\"%s\"", event_form->onforminput);
+			fprintf(stdout, " onforminput=\"%s\"", event_form->onforminput);
 		}
 		if(event_form->onhaschange != NULL)
 		{
-			printf(" onhaschange=\"%s\"", event_form->onhaschange);
+			fprintf(stdout, " onhaschange=\"%s\"", event_form->onhaschange);
 		}
 		
 		if(event_form->oninput != NULL)
 		{
-			printf(" oninput=\"%s\"", event_form->oninput);
+			fprintf(stdout, " oninput=\"%s\"", event_form->oninput);
 		}
 		if(event_form->oninvalid != NULL)
 		{
-			printf(" oninvalid=\"%s\"", event_form->oninvalid);
+			fprintf(stdout, " oninvalid=\"%s\"", event_form->oninvalid);
 		}
 		
 		if(event_form->onreset != NULL)
 		{
-			printf(" onreset=\"%s\"", event_form->onreset);
+			fprintf(stdout, " onreset=\"%s\"", event_form->onreset);
 		}
 		
 		if(event_form->onselect != NULL)
 		{
-			printf(" onselect=\"%s\"", event_form->onselect);
+			fprintf(stdout, " onselect=\"%s\"", event_form->onselect);
 		}
 	
 		if(event_form->onsubmit != NULL)
 		{
-			printf(" onsubmit=\"%s\"", event_form->onsubmit);
+			fprintf(stdout, " onsubmit=\"%s\"", event_form->onsubmit);
 		}
 	
 }
@@ -145,126 +145,126 @@ void html5_render_event_attributes_media(html5_event_attributes_media *event_med
 {
 	if(event_media->onabort != NULL)
 	{
-		printf(" onabort=\"%s\"", event_media->onabort);
+		fprintf(stdout, " onabort=\"%s\"", event_media->onabort);
 	}
 
 	if(event_media->oncanplay != NULL)
 	{
-		printf(" oncanplay=\"%s\"", event_media->oncanplay);
+		fprintf(stdout, " oncanplay=\"%s\"", event_media->oncanplay);
 	}
 	
 	if(event_media->oncanplaythrough != NULL)
 	{
-		printf(" oncanplaythrough=\"%s\"", event_media->oncanplaythrough);
+		fprintf(stdout, " oncanplaythrough=\"%s\"", event_media->oncanplaythrough);
 	}
 	
 	if(event_media->ondurationchange != NULL)
 	{
-		printf(" ondurationchange=\"%s\"", event_media->ondurationchange);
+		fprintf(stdout, " ondurationchange=\"%s\"", event_media->ondurationchange);
 	}
 	
 	if(event_media->onemptied != NULL)
 	{
-		printf(" onemptied=\"%s\"", event_media->onemptied);
+		fprintf(stdout, " onemptied=\"%s\"", event_media->onemptied);
 	}
 	
 	if(event_media->onended != NULL)
 	{
-		printf(" onended=\"%s\"", event_media->onended);
+		fprintf(stdout, " onended=\"%s\"", event_media->onended);
 	}
 	
 	if(event_media->onerror != NULL)
 	{
-		printf(" onerror=\"%s\"", event_media->onerror);
+		fprintf(stdout, " onerror=\"%s\"", event_media->onerror);
 	}
 	
 	if(event_media->onloaddata != NULL)
 	{
-		printf(" onloaddata=\"%s\"", event_media->onloaddata);
+		fprintf(stdout, " onloaddata=\"%s\"", event_media->onloaddata);
 	}
 	
 	if(event_media->onloadedmetadata != NULL)
 	{
-		printf(" onloadedmetadata=\"%s\"", event_media->onloadedmetadata);
+		fprintf(stdout, " onloadedmetadata=\"%s\"", event_media->onloadedmetadata);
 	}
 	
 	if(event_media->onloadstart != NULL)
 	{
-		printf(" onloadstart=\"%s\"", event_media->onloadstart);
+		fprintf(stdout, " onloadstart=\"%s\"", event_media->onloadstart);
 	}
 	if(event_media->onpause != NULL)
 	{
-		printf(" onpause=\"%s\"", event_media->onpause);
+		fprintf(stdout, " onpause=\"%s\"", event_media->onpause);
 	}
 	
 	if(event_media->onplay != NULL)
 	{
-		printf(" onplay=\"%s\"", event_media->onplay);
+		fprintf(stdout, " onplay=\"%s\"", event_media->onplay);
 	}
 	if(event_media->onplaying != NULL)
 	{
-		printf(" onplaying=\"%s\"", event_media->onplaying);
+		fprintf(stdout, " onplaying=\"%s\"", event_media->onplaying);
 	
 	}
 	
 	if(event_media->onprogress != NULL)
 	{
-		printf(" onprogress=\"%s\"", event_media->onprogress);
+		fprintf(stdout, " onprogress=\"%s\"", event_media->onprogress);
 	}
 	
 	if(event_media->onratechange != NULL)
 	{
-		printf(" onratechange=\"%s\"", event_media->onratechange);
+		fprintf(stdout, " onratechange=\"%s\"", event_media->onratechange);
 	}
 	
 	if(event_media->onreadystatechange != NULL)
 	{
-		printf(" onreadystatechange=\"%s\"", event_media->onreadystatechange);
+		fprintf(stdout, " onreadystatechange=\"%s\"", event_media->onreadystatechange);
 	}
 	
 	if(event_media->onseeked != NULL)
 	{
-		printf(" onseeked=\"%s\"", event_media->onseeked);
+		fprintf(stdout, " onseeked=\"%s\"", event_media->onseeked);
 	}
 	
 	if(event_media->onstalled != NULL)
 	{
-		printf(" onstalled=\"%s\"", event_media->onstalled);
+		fprintf(stdout, " onstalled=\"%s\"", event_media->onstalled);
 	}
 	
 	if(event_media->onsuspend != NULL)
 	{
-		printf(" onsuspend=\"%s\"", event_media->onsuspend);
+		fprintf(stdout, " onsuspend=\"%s\"", event_media->onsuspend);
 	}
 	
 	if(event_media->ontimeupdate != NULL)
 	{
-		printf(" ontimeupdate=\"%s\"", event_media->ontimeupdate);
+		fprintf(stdout, " ontimeupdate=\"%s\"", event_media->ontimeupdate);
 	}
 	
 	if(event_media->onvolumechange != NULL)
 	{
-		printf(" onvolumechange=\"%s\"", event_media->onvolumechange);
+		fprintf(stdout, " onvolumechange=\"%s\"", event_media->onvolumechange);
 	}
 	
 	if(event_media->onwaiting != NULL)
 	{
-		printf(" onwaiting=\"%s\"", event_media->onwaiting);
+		fprintf(stdout, " onwaiting=\"%s\"", event_media->onwaiting);
 	}
 	
 	if(event_media->onseeked != NULL)
 	{
-		printf(" onseeked=\"%s\"", event_media->onseeked);
+		fprintf(stdout, " onseeked=\"%s\"", event_media->onseeked);
 	}
 	
 	if(event_media->onseeked != NULL)
 	{
-		printf(" onseeked=\"%s\"", event_media->onseeked);
+		fprintf(stdout, " onseeked=\"%s\"", event_media->onseeked);
 	}
 	
 	if(event_media->onseeked != NULL)
 	{
-		printf(" onseeked=\"%s\"", event_media->onseeked);
+		fprintf(stdout, " onseeked=\"%s\"", event_media->onseeked);
 	}
 }
 
@@ -272,74 +272,74 @@ void html5_render_event_attributes_mouse(html5_event_attributes_mouse *event_mou
 {
 	if(event_mouse->inmousewheel != NULL)
 	{
-		printf(" inmousewheel=\"%s\"", event_mouse->inmousewheel);
+		fprintf(stdout, " inmousewheel=\"%s\"", event_mouse->inmousewheel);
 	}
 
 	if(event_mouse->onclick != NULL)
 	{
-		printf(" onclick=\"%s\"", event_mouse->onclick);
+		fprintf(stdout, " onclick=\"%s\"", event_mouse->onclick);
 	}
 	
 	if(event_mouse->ondbclick != NULL)
 	{
-		printf(" ondbclick=\"%s\"", event_mouse->ondbclick);
+		fprintf(stdout, " ondbclick=\"%s\"", event_mouse->ondbclick);
 	}
 	
 	if(event_mouse->ondrag != NULL)
 	{
-		printf(" ondrag=\"%s\"", event_mouse->ondrag);
+		fprintf(stdout, " ondrag=\"%s\"", event_mouse->ondrag);
 	}
 	
 	if(event_mouse->ondragend != NULL)
 	{
-		printf(" ondragend =\"%s\"", event_mouse->ondragend );
+		fprintf(stdout, " ondragend =\"%s\"", event_mouse->ondragend );
 	}
 	
 	if(event_mouse->ondragenter != NULL)
 	{
-		printf(" ondragenter=\"%s\"", event_mouse->ondragenter);
+		fprintf(stdout, " ondragenter=\"%s\"", event_mouse->ondragenter);
 	}
 	
 	if(event_mouse->ondragleave != NULL)
 	{
-		printf(" ondragleave=\"%s\"", event_mouse->ondragleave);
+		fprintf(stdout, " ondragleave=\"%s\"", event_mouse->ondragleave);
 	}
 	
 	if(event_mouse->ondragover != NULL)
 	{
-		printf(" ondragover=\"%s\"", event_mouse->ondragover);
+		fprintf(stdout, " ondragover=\"%s\"", event_mouse->ondragover);
 	}
 	if(event_mouse->ondragstart != NULL)
 	{
-		printf(" ondragstart=\"%s\"", event_mouse->ondragstart);
+		fprintf(stdout, " ondragstart=\"%s\"", event_mouse->ondragstart);
 	}
 	if(event_mouse->ondrop != NULL)
 	{
-		printf(" ondrop=\"%s\"", event_mouse->ondrop);
+		fprintf(stdout, " ondrop=\"%s\"", event_mouse->ondrop);
 	}
 	if(event_mouse->onmousedown != NULL)
 	{
-		printf(" onmousedown=\"%s\"", event_mouse->onmousedown);
+		fprintf(stdout, " onmousedown=\"%s\"", event_mouse->onmousedown);
 	}
 	if(event_mouse->onmousemove != NULL)
 	{
-		printf(" onmousemove=\"%s\"", event_mouse->onmousemove);
+		fprintf(stdout, " onmousemove=\"%s\"", event_mouse->onmousemove);
 	}
 	if(event_mouse->onmouseout != NULL)
 	{
-		printf(" onmouseout=\"%s\"", event_mouse->onmouseout);
+		fprintf(stdout, " onmouseout=\"%s\"", event_mouse->onmouseout);
 	}
 	if(event_mouse->onmouseover != NULL)
 	{
-		printf(" onmouseover=\"%s\"", event_mouse->onmouseover);
+		fprintf(stdout, " onmouseover=\"%s\"", event_mouse->onmouseover);
 	}
 		if(event_mouse->onmouseup != NULL)
 	{
-		printf(" onmouseup=\"%s\"", event_mouse->onmouseup);
+		fprintf(stdout, " onmouseup=\"%s\"", event_mouse->onmouseup);
 	}
 		if(event_mouse->onscroll != NULL)
 	{
-		printf(" onscroll=\"%s\"", event_mouse->onscroll);
+		fprintf(stdout, " onscroll=\"%s\"", event_mouse->onscroll);
 	}
 }
 
@@ -347,97 +347,97 @@ void html5_render_event_attributes_window(html5_event_attributes_window *event_w
 {
 	if(event_window->onafterprint != NULL)
 	{
-		printf(" onafterprint=\"%s\"", event_window->onafterprint);
+		fprintf(stdout, " onafterprint=\"%s\"", event_window->onafterprint);
 	}
 	
 	if(event_window->onbeforeonload != NULL)
 	{
-		printf(" onbeforeonload=\"%s\"", event_window->onbeforeonload);
+		fprintf(stdout, " onbeforeonload=\"%s\"", event_window->onbeforeonload);
 	}
 	
 	if(event_window->onbeforeprint != NULL)
 	{
-		printf(" onbeforeprint=\"%s\"", event_window->onbeforeprint);
+		fprintf(stdout, " onbeforeprint=\"%s\"", event_window->onbeforeprint);
 	}
 	
 	if(event_window->onblur != NULL)
 	{
-		printf(" onblur=\"%s\"", event_window->onblur);
+		fprintf(stdout, " onblur=\"%s\"", event_window->onblur);
 	}
 	
 	if(event_window->onerror != NULL)
 	{
-		printf(" onerror=\"%s\"", event_window->onerror);
+		fprintf(stdout, " onerror=\"%s\"", event_window->onerror);
 	}
 	
 	if(event_window->onfocus != NULL)
 	{
-		printf(" onfocus=\"%s\"", event_window->onfocus);
+		fprintf(stdout, " onfocus=\"%s\"", event_window->onfocus);
 	}
 	
 		if(event_window->onhaschange != NULL)
 	{
-		printf(" onhaschange=\"%s\"", event_window->onhaschange);
+		fprintf(stdout, " onhaschange=\"%s\"", event_window->onhaschange);
 	}
 	
 	if(event_window->onload != NULL)
 	{
-		printf(" onload=\"%s\"", event_window->onload);
+		fprintf(stdout, " onload=\"%s\"", event_window->onload);
 	}
 	
 	if(event_window->onmessage != NULL)
 	{
-		printf(" onmessage=\"%s\"", event_window->onmessage);
+		fprintf(stdout, " onmessage=\"%s\"", event_window->onmessage);
 	}
 	
 	if(event_window->onoffline != NULL)
 	{
-		printf(" onoffline=\"%s\"", event_window->onoffline);
+		fprintf(stdout, " onoffline=\"%s\"", event_window->onoffline);
 	}
 	
 	if(event_window->ononline != NULL)
 	{
-		printf(" ononline=\"%s\"", event_window->ononline);
+		fprintf(stdout, " ononline=\"%s\"", event_window->ononline);
 	}
 	
 	if(event_window->onpagehide != NULL)
 	{
-		printf(" onpagehide=\"%s\"", event_window->onpagehide);
+		fprintf(stdout, " onpagehide=\"%s\"", event_window->onpagehide);
 	}
 	
 	if(event_window->onpageshow != NULL)
 	{
-		printf(" onpageshow=\"%s\"", event_window->onpageshow);
+		fprintf(stdout, " onpageshow=\"%s\"", event_window->onpageshow);
 	}
 	
 	if(event_window->onpopstate != NULL)
 	{
-		printf(" onpopstate=\"%s\"", event_window->onpopstate);
+		fprintf(stdout, " onpopstate=\"%s\"", event_window->onpopstate);
 	}
 	
 	if(event_window->onredo != NULL)
 	{
-		printf(" onredo=\"%s\"", event_window->onredo);
+		fprintf(stdout, " onredo=\"%s\"", event_window->onredo);
 	}
 	
 	if(event_window->onresize != NULL)
 	{
-		printf(" onresize=\"%s\"", event_window->onresize);
+		fprintf(stdout, " onresize=\"%s\"", event_window->onresize);
 	}
 	
 	if(event_window->onstorage != NULL)
 	{
-		printf(" onstorage=\"%s\"", event_window->onstorage);
+		fprintf(stdout, " onstorage=\"%s\"", event_window->onstorage);
 	}
 	
 	if(event_window->onundo != NULL)
 	{
-		printf(" onundo=\"%s\"", event_window->onundo);
+		fprintf(stdout, " onundo=\"%s\"", event_window->onundo);
 	}
 	
 	if(event_window->onunload != NULL)
 	{
-		printf(" onunload=\"%s\"", event_window->onunload);
+		fprintf(stdout, " onunload=\"%s\"", event_window->onunload);
 	}
 	
 }
@@ -590,13 +590,13 @@ void html5_attributes_body_outset(html5_attributes_body *html5_attr_body)
 
 void html5_body(html5_attributes_global *html5_attr_global, html5_attributes_body *html5_attr_body, html5_event_attributes *html5_event_attr)
 {
-	printf("<body");
+	fprintf(stdout, "<body");
 	
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_body(html5_attr_body);
 	html5_render_event_attributes(html5_event_attr);
 	
-	printf(">\n");
+	fprintf(stdout, ">\n");
 }
 
 void html5_attributes_global_outset(html5_attributes_global *html5_attr_global)
@@ -664,44 +664,44 @@ void html5_render_attributes_area(html5_attributes_area *attr_area)
 
 	if(attr_area->alt != NULL)
 	{
-		printf(" alt=\"%s\"", attr_area->alt);
+		fprintf(stdout, " alt=\"%s\"", attr_area->alt);
 	}
 	
 	if(attr_area->coords != NULL)
 	{
-		printf(" coords=\"%s\"", attr_area->coords);
+		fprintf(stdout, " coords=\"%s\"", attr_area->coords);
 	}
 	
 	if(attr_area->href != NULL)
 	{
-		printf(" href=\"%s\"", attr_area->href);
+		fprintf(stdout, " href=\"%s\"", attr_area->href);
 	}
 	
 	if(attr_area->hreflang != NULL)
 	{
-		printf(" hreflang=\"%s\"", attr_area->hreflang);
+		fprintf(stdout, " hreflang=\"%s\"", attr_area->hreflang);
 	}
 	
 	if(attr_area->media != NULL)
 	{
-		printf(" media=\"%s\"", attr_area->media);
+		fprintf(stdout, " media=\"%s\"", attr_area->media);
 	}
 	
 	if(attr_area->rel != NULL)
 	{
-		printf(" rel=\"%s\"", attr_area->rel);
+		fprintf(stdout, " rel=\"%s\"", attr_area->rel);
 	}
 	if(attr_area->shape != NULL)
 	{
-		printf(" shape=\"%s\"", attr_area->shape);
+		fprintf(stdout, " shape=\"%s\"", attr_area->shape);
 	}
 	if(attr_area->target != NULL)
 	{
-		printf(" target=\"%s\"", attr_area->target);
+		fprintf(stdout, " target=\"%s\"", attr_area->target);
 	}
 	if(attr_area->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_area->type);
+		fprintf(stdout, " type=\"%s\"", attr_area->type);
 	}
 
 	
@@ -713,27 +713,27 @@ void html5_render_attributes_audio(html5_attributes_audio *attr_audio)
 	
 	if(attr_audio->autoplay != NULL)
 	{
-		printf(" autoplay=\"%s\"", attr_audio->autoplay);
+		fprintf(stdout, " autoplay=\"%s\"", attr_audio->autoplay);
 	}
 	
 	if(attr_audio->controls != NULL)
 	{
-		printf(" controls=\"%s\"", attr_audio->controls);
+		fprintf(stdout, " controls=\"%s\"", attr_audio->controls);
 	}
 	
 	if(attr_audio->loop != NULL)
 	{
-		printf(" loop=\"%s\"", attr_audio->loop);
+		fprintf(stdout, " loop=\"%s\"", attr_audio->loop);
 	}
 	
 	if(attr_audio->preload != NULL)
 	{
-		printf(" preload=\"%s\"", attr_audio->preload);
+		fprintf(stdout, " preload=\"%s\"", attr_audio->preload);
 	}
 	
 	if(attr_audio->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_audio->src);
+		fprintf(stdout, " src=\"%s\"", attr_audio->src);
 	}
 }
 
@@ -743,12 +743,12 @@ void html5_render_attributes_base(html5_attributes_base *attr_base)
 
 	if(attr_base->href != NULL)
 	{
-		printf(" href=\"%s\"",attr_base->href);
+		fprintf(stdout, " href=\"%s\"",attr_base->href);
 	}
 	
 	if(attr_base->target != NULL)
 	{
-		printf(" target=\"%s\"", attr_base->target);
+		fprintf(stdout, " target=\"%s\"", attr_base->target);
 	}
 }
 
@@ -758,7 +758,7 @@ void html5_render_attributes_bdo(html5_attributes_bdo *attr_bdo)
 	
 	if(attr_bdo->dir != NULL)
 	{
-		printf(" dir=\"%s\"", attr_bdo->dir);
+		fprintf(stdout, " dir=\"%s\"", attr_bdo->dir);
 	}
 }
 
@@ -768,7 +768,7 @@ void html5_render_attributes_blockquote(html5_attributes_blockquote *attr_blockq
 	
 	if(attr_blockquote->cite != NULL)
 	{
-		printf(" cite=\"%s\"", attr_blockquote->cite);
+		fprintf(stdout, " cite=\"%s\"", attr_blockquote->cite);
 	}
 }
 
@@ -779,57 +779,57 @@ void html5_render_attributes_button(html5_attributes_button *attr_button)
 
 	if(attr_button->autofocus != NULL)
 	{
-		printf(" autofocus=\"%s\"", attr_button->autofocus);
+		fprintf(stdout, " autofocus=\"%s\"", attr_button->autofocus);
 	}
 	
 	if(attr_button->disabled!= NULL)
 	{
-		printf(" disabled=\"%s\"", attr_button->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_button->disabled);
 	}
 	
 	if(attr_button->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_button->form);
+		fprintf(stdout, " form=\"%s\"", attr_button->form);
 	}
 	
 	if(attr_button->formaction != NULL)
 	{
-		printf(" formaction=\"%s\"", attr_button->formaction);
+		fprintf(stdout, " formaction=\"%s\"", attr_button->formaction);
 	}
 	
 	if(attr_button->formenctype != NULL)
 	{
-		printf(" formenctype=\"%s\"", attr_button->formenctype);
+		fprintf(stdout, " formenctype=\"%s\"", attr_button->formenctype);
 	}
 	
 	if(attr_button->formmethod != NULL)
 	{
-		printf(" formmethod=\"%s\"", attr_button->formmethod);
+		fprintf(stdout, " formmethod=\"%s\"", attr_button->formmethod);
 	}
 	
 	if(attr_button->formnovalidate != NULL)
 	{
-		printf(" formnovalidate=\"%s\"", attr_button->formnovalidate);
+		fprintf(stdout, " formnovalidate=\"%s\"", attr_button->formnovalidate);
 	}
 	
 	if(attr_button->fortarget != NULL)
 	{
-		printf(" fortarget=\"%s\"", attr_button->fortarget);
+		fprintf(stdout, " fortarget=\"%s\"", attr_button->fortarget);
 	}
 	
 	if(attr_button->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_button->name);
+		fprintf(stdout, " name=\"%s\"", attr_button->name);
 	}
 
 	if(attr_button->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_button->type);
+		fprintf(stdout, " type=\"%s\"", attr_button->type);
 	}
 	
 	if(attr_button->value != NULL)
 	{
-		printf(" value=\"%s\"", attr_button->value);
+		fprintf(stdout, " value=\"%s\"", attr_button->value);
 	}
 }
 
@@ -839,12 +839,12 @@ void html5_render_attributes_canvas(html5_attributes_canvas *attr_canvas)
 	
 	if(attr_canvas->height != NULL)
 	{
-		printf(" height=\"%s\"", attr_canvas->height);
+		fprintf(stdout, " height=\"%s\"", attr_canvas->height);
 	}
 	
 	if(attr_canvas->width != NULL)
 	{
-		printf(" width=\"%s\"", attr_canvas->width);
+		fprintf(stdout, " width=\"%s\"", attr_canvas->width);
 	}
 }
 
@@ -854,7 +854,7 @@ void html5_render_attributes_col(html5_attributes_col *attr_col)
 	
 	if(attr_col->span != NULL)
 	{
-		printf(" span=\"%s\"", attr_col->span);
+		fprintf(stdout, " span=\"%s\"", attr_col->span);
 	}
 }
 
@@ -864,7 +864,7 @@ void html5_render_attributes_colgroup(html5_attributes_colgroup *attr_colgroup)
 	
 	if(attr_colgroup->span != NULL)
 	{
-		printf(" span=\"%s\"", attr_colgroup->span);	}
+		fprintf(stdout, " span=\"%s\"", attr_colgroup->span);	}
 	
 }
 
@@ -874,32 +874,32 @@ void html5_render_attributes_command(html5_attributes_command *attr_command)
 
 	if(attr_command->checked != NULL)
 	{
-		printf(" checked=\"%s\"", attr_command->checked);
+		fprintf(stdout, " checked=\"%s\"", attr_command->checked);
 	}
 
 	if(attr_command->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_command->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_command->disabled);
 	}
 	
 	if(attr_command->icon != NULL)
 	{
-		printf(" icon=\"%s\"", attr_command->icon);
+		fprintf(stdout, " icon=\"%s\"", attr_command->icon);
 	}
 	
 	if(attr_command->label != NULL)
 	{
-		printf(" label=\"%s\"", attr_command->label);
+		fprintf(stdout, " label=\"%s\"", attr_command->label);
 	}
 	
 	if(attr_command->radiogroup != NULL)
 	{
-		printf(" radiogroup=\"%s\"", attr_command->radiogroup);
+		fprintf(stdout, " radiogroup=\"%s\"", attr_command->radiogroup);
 	}
 	
 	if(attr_command->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_command->type);
+		fprintf(stdout, " type=\"%s\"", attr_command->type);
 	}
 	
 }
@@ -910,12 +910,12 @@ void html5_render_attributes_del(html5_attributes_del *attr_del)
 	
 	if(attr_del->cite != NULL)
 	{
-		printf(" cite=\"%s\"", attr_del->cite);
+		fprintf(stdout, " cite=\"%s\"", attr_del->cite);
 	}
 	
 	if(attr_del->datetime != NULL)
 	{
-		printf(" datetime=\"%s\"", attr_del->datetime);
+		fprintf(stdout, " datetime=\"%s\"", attr_del->datetime);
 	}
 }
 
@@ -925,7 +925,7 @@ void html5_render_attributes_details(html5_attributes_details *attr_details)
 	
 	if(attr_details->open != NULL)
 	{
-		printf(" open=\"%s\"", attr_details->open);
+		fprintf(stdout, " open=\"%s\"", attr_details->open);
 	}
 }
 
@@ -935,25 +935,25 @@ void html5_render_attributes_embed(html5_attributes_embed *attr_embed)
 	
 	if(attr_embed->height != NULL)
 	{
-		printf(" height=\"%s\"", attr_embed->height);
+		fprintf(stdout, " height=\"%s\"", attr_embed->height);
 	}
 	
 	
 	if(attr_embed->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_embed->src);
+		fprintf(stdout, " src=\"%s\"", attr_embed->src);
 	}
 	
 	
 	if(attr_embed->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_embed->type);
+		fprintf(stdout, " type=\"%s\"", attr_embed->type);
 	}
 	
 	
 	if(attr_embed->width != NULL)
 	{
-		printf(" width=\"%s\"", attr_embed->width);
+		fprintf(stdout, " width=\"%s\"", attr_embed->width);
 	}
 
 }
@@ -964,12 +964,12 @@ void html5_render_attributes_fieldset(html5_attributes_fieldset *attr_fieldset)
 
 	if(attr_fieldset->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_fieldset->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_fieldset->disabled);
 	}
 	
 	if(attr_fieldset->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_fieldset->form);
+		fprintf(stdout, " form=\"%s\"", attr_fieldset->form);
 	}
 	
 }
@@ -980,47 +980,47 @@ void html5_render_attributes_form(html5_attributes_form *attr_form)
 
 	if(attr_form->accept != NULL)
 	{
-		printf(" accept=\"%s\"", attr_form->accept);
+		fprintf(stdout, " accept=\"%s\"", attr_form->accept);
 	}
 	
 	if(attr_form->accept_charset != NULL)
 	{
-		printf(" accept-charset=\"%s\"", attr_form->accept_charset);
+		fprintf(stdout, " accept-charset=\"%s\"", attr_form->accept_charset);
 	}
 
 	if(attr_form->autocomplete != NULL)
 	{
-		printf(" autocomplete=\"%s\"", attr_form->autocomplete);
+		fprintf(stdout, " autocomplete=\"%s\"", attr_form->autocomplete);
 	}
 	
 	if(attr_form->action != NULL)
 	{
-		printf(" action=\"%s\"", attr_form->action);
+		fprintf(stdout, " action=\"%s\"", attr_form->action);
 	}
 	
 	if(attr_form->enctype != NULL)
 	{
-		printf(" enctype=\"%s\"", attr_form->enctype);
+		fprintf(stdout, " enctype=\"%s\"", attr_form->enctype);
 	}
 	
 	if(attr_form->method != NULL)
 	{
-		printf(" method=\"%s\"", attr_form->method);
+		fprintf(stdout, " method=\"%s\"", attr_form->method);
 	}
 	
 	if(attr_form->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_form->name);
+		fprintf(stdout, " name=\"%s\"", attr_form->name);
 	}
 	
 	if(attr_form->novalidate != NULL)
 	{
-		printf(" novalidate=\"%s\"", attr_form->novalidate);
+		fprintf(stdout, " novalidate=\"%s\"", attr_form->novalidate);
 	}
 	
 	if(attr_form->target != NULL)
 	{
-		printf(" target=\"%s\"", attr_form->target);
+		fprintf(stdout, " target=\"%s\"", attr_form->target);
 	}
 }
 
@@ -1030,12 +1030,12 @@ void html5_render_attributes_html(html5_attributes_html *attr_html)
 
 	if(attr_html->manifest != NULL)
 	{
-		printf(" manifest=\"%s\"", attr_html->manifest);
+		fprintf(stdout, " manifest=\"%s\"", attr_html->manifest);
 	}
 
 	if(attr_html->xmlns != NULL)
 	{
-		printf(" xmlns=\"%s\"", attr_html->xmlns);
+		fprintf(stdout, " xmlns=\"%s\"", attr_html->xmlns);
 	}
 }
 
@@ -1045,37 +1045,37 @@ void html5_render_attributes_iframe(html5_attributes_iframe *attr_iframe)
 	
 	if(attr_iframe->height != NULL)
 	{
-		printf(" height=\"%s\"", attr_iframe->height);
+		fprintf(stdout, " height=\"%s\"", attr_iframe->height);
 	}
 	
 	if(attr_iframe->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_iframe->name);
+		fprintf(stdout, " name=\"%s\"", attr_iframe->name);
 	}
 	
 	if(attr_iframe->sandbox != NULL)
 	{
-		printf(" sandbox=\"%s\"", attr_iframe->sandbox);
+		fprintf(stdout, " sandbox=\"%s\"", attr_iframe->sandbox);
 	}
 	
 	if(attr_iframe->seamless != NULL)
 	{
-		printf(" seamless=\"%s\"", attr_iframe->seamless);
+		fprintf(stdout, " seamless=\"%s\"", attr_iframe->seamless);
 	}
 	
 	if(attr_iframe->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_iframe->src);
+		fprintf(stdout, " src=\"%s\"", attr_iframe->src);
 	}
 	
 	if(attr_iframe->srcdoc != NULL)
 	{
-		printf(" srcdoc=\"%s\"", attr_iframe->srcdoc);
+		fprintf(stdout, " srcdoc=\"%s\"", attr_iframe->srcdoc);
 	}
 	
 	if(attr_iframe->width != NULL)
 	{
-		printf(" width=\"%s\"", attr_iframe->width);
+		fprintf(stdout, " width=\"%s\"", attr_iframe->width);
 	}
 }
 
@@ -1085,32 +1085,32 @@ void html5_render_attributes_img(html5_attributes_img *attr_img)
 	
 	if(attr_img->alt != NULL)
 	{
-		printf(" alt=\"%s\"", attr_img->alt);
+		fprintf(stdout, " alt=\"%s\"", attr_img->alt);
 	}
 
 	if(attr_img->height != NULL)
 	{
-		printf(" alt=\"%s\"", attr_img->height);
+		fprintf(stdout, " alt=\"%s\"", attr_img->height);
 	}
 	
 	if(attr_img->ismap != NULL)
 	{
-		printf(" ismap=\"%s\"", attr_img->ismap);
+		fprintf(stdout, " ismap=\"%s\"", attr_img->ismap);
 	}
 	
 	if(attr_img->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_img->src);
+		fprintf(stdout, " src=\"%s\"", attr_img->src);
 	}
 	
 	if(attr_img->usemap != NULL)
 	{
-		printf(" usemap=\"%s\"", attr_img->usemap);
+		fprintf(stdout, " usemap=\"%s\"", attr_img->usemap);
 	}
 	
 	if(attr_img->width != NULL)
 	{
-		printf(" width=\"%s\"", attr_img->width);
+		fprintf(stdout, " width=\"%s\"", attr_img->width);
 	}
 
 }
@@ -1121,151 +1121,151 @@ void html5_render_attributes_input(html5_attributes_input *attr_input)
 	
 	if(attr_input->accept != NULL)
 	{
-		printf(" accept=\"%s\"", attr_input->accept);
+		fprintf(stdout, " accept=\"%s\"", attr_input->accept);
 	}
 	
 	if(attr_input->alt != NULL)
 	{
-		printf(" alt=\"%s\"", attr_input->alt);
+		fprintf(stdout, " alt=\"%s\"", attr_input->alt);
 	}
 	
 	if(attr_input->autocomplete != NULL)
 	{
-		printf(" autocomplete=\"%s\"", attr_input->autocomplete);
+		fprintf(stdout, " autocomplete=\"%s\"", attr_input->autocomplete);
 	}
 	
 	if(attr_input->autofocus != NULL)
 	{
-		printf(" autofocus=\"%s\"", attr_input->autofocus);
+		fprintf(stdout, " autofocus=\"%s\"", attr_input->autofocus);
 	}
 	
 	if(attr_input->checked != NULL)
 	{
-		printf(" checked=\"%s\"", attr_input->checked);
+		fprintf(stdout, " checked=\"%s\"", attr_input->checked);
 	}
 	
 	if(attr_input->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_input->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_input->disabled);
 	}
 	
 	if(attr_input->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_input->form);
+		fprintf(stdout, " form=\"%s\"", attr_input->form);
 	}
 	
 	if(attr_input->formaction != NULL)
 	{
-		printf(" formaction=\"%s\"", attr_input->formaction);
+		fprintf(stdout, " formaction=\"%s\"", attr_input->formaction);
 	}
 	
 	if(attr_input->formenctype != NULL)
 	{
-		printf(" formenctype=\"%s\"", attr_input->formenctype);
+		fprintf(stdout, " formenctype=\"%s\"", attr_input->formenctype);
 	}
 	
 	
 	if(attr_input->formmethod != NULL)
 	{
-		printf(" formmethod=\"%s\"", attr_input->formmethod);
+		fprintf(stdout, " formmethod=\"%s\"", attr_input->formmethod);
 	}
 	
 	if(attr_input->formnovalidate != NULL)
 	{
-		printf(" formnovalidate=\"%s\"", attr_input->formnovalidate);
+		fprintf(stdout, " formnovalidate=\"%s\"", attr_input->formnovalidate);
 	}
 	
 	
 	if(attr_input->fortarget != NULL)
 	{
-		printf(" fortarget=\"%s\"", attr_input->fortarget);
+		fprintf(stdout, " fortarget=\"%s\"", attr_input->fortarget);
 	}
 	
 	if(attr_input->height != NULL)
 	{
-		printf(" height=\"%s\"", attr_input->height);
+		fprintf(stdout, " height=\"%s\"", attr_input->height);
 	}
 	
 	
 	if(attr_input->list != NULL)
 	{
-		printf(" list=\"%s\"", attr_input->list);
+		fprintf(stdout, " list=\"%s\"", attr_input->list);
 	}
 	
 	
 	if(attr_input->max != NULL)
 	{
-		printf(" max=\"%s\"", attr_input->max);
+		fprintf(stdout, " max=\"%s\"", attr_input->max);
 	}
 	
 	if(attr_input->maxlength != NULL)
 	{
-		printf(" maxlength=\"%s\"", attr_input->maxlength);
+		fprintf(stdout, " maxlength=\"%s\"", attr_input->maxlength);
 	}
 	
 	if(attr_input->min != NULL)
 	{
-		printf(" min=\"%s\"", attr_input->min);
+		fprintf(stdout, " min=\"%s\"", attr_input->min);
 	}
 	
 	if(attr_input->multiple != NULL)
 	{
-		printf(" multiple=\"%s\"", attr_input->multiple);
+		fprintf(stdout, " multiple=\"%s\"", attr_input->multiple);
 	}
 	
 	if(attr_input->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_input->name);
+		fprintf(stdout, " name=\"%s\"", attr_input->name);
 	}
 	
 	if(attr_input->pattern != NULL)
 	{
-		printf(" pattern=\"%s\"", attr_input->pattern);
+		fprintf(stdout, " pattern=\"%s\"", attr_input->pattern);
 	}
 	
 	if(attr_input->placeholder != NULL)
 	{
-		printf(" placeholder=\"%s\"", attr_input->placeholder);
+		fprintf(stdout, " placeholder=\"%s\"", attr_input->placeholder);
 	}
 	
 	if(attr_input->readonly != NULL)
 	{
-		printf(" readonly=\"%s\"", attr_input->readonly);
+		fprintf(stdout, " readonly=\"%s\"", attr_input->readonly);
 	}
 	
 	if(attr_input->required != NULL)
 	{
-		printf(" required=\"%s\"", attr_input->required);
+		fprintf(stdout, " required=\"%s\"", attr_input->required);
 	}
 	
 	if(attr_input->size != NULL)
 	{
-		printf(" size=\"%s\"", attr_input->size);
+		fprintf(stdout, " size=\"%s\"", attr_input->size);
 	}
 	
 	if(attr_input->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_input->src);
+		fprintf(stdout, " src=\"%s\"", attr_input->src);
 	}
 
 	if(attr_input->step != NULL)
 	{
-		printf(" step=\"%s\"", attr_input->step);
+		fprintf(stdout, " step=\"%s\"", attr_input->step);
 	}
 	
 	if(attr_input->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_input->type);
+		fprintf(stdout, " type=\"%s\"", attr_input->type);
 	}
 	
 	if(attr_input->value != NULL)
 	{
-		printf(" value=\"%s\"", attr_input->value);
+		fprintf(stdout, " value=\"%s\"", attr_input->value);
 	}
 
 	if(attr_input->width != NULL)
 	{
-		printf(" width=\"%s\"", attr_input->width);
+		fprintf(stdout, " width=\"%s\"", attr_input->width);
 	}
 	
 }
@@ -1276,12 +1276,12 @@ void html5_render_attributes_ins(html5_attributes_ins *attr_ins)
 	
 	if(attr_ins->cite != NULL)
 	{
-		printf(" cite=\"%s\"", attr_ins->cite);
+		fprintf(stdout, " cite=\"%s\"", attr_ins->cite);
 	}
 
 	if(attr_ins->datetime != NULL)
 	{
-		printf(" datetime=\"%s\"", attr_ins->datetime);
+		fprintf(stdout, " datetime=\"%s\"", attr_ins->datetime);
 	}
 	
 }
@@ -1292,32 +1292,32 @@ void html5_render_attributes_keygen(html5_attributes_keygen *attr_keygen)
 	
 	if(attr_keygen->autofocus != NULL)
 	{
-		printf(" autofocus=\"%s\"", attr_keygen->autofocus);
+		fprintf(stdout, " autofocus=\"%s\"", attr_keygen->autofocus);
 	}
 
 	if(attr_keygen->challenge != NULL)
 	{
-		printf(" challenge=\"%s\"", attr_keygen->challenge);
+		fprintf(stdout, " challenge=\"%s\"", attr_keygen->challenge);
 	}
 	
 	if(attr_keygen->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_keygen->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_keygen->disabled);
 	}
 	
 	if(attr_keygen->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_keygen->form);
+		fprintf(stdout, " form=\"%s\"", attr_keygen->form);
 	}
 	
 	if(attr_keygen->keytype != NULL)
 	{
-		printf(" keytype=\"%s\"", attr_keygen->keytype);
+		fprintf(stdout, " keytype=\"%s\"", attr_keygen->keytype);
 	}
 	
 	if(attr_keygen->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_keygen->name);
+		fprintf(stdout, " name=\"%s\"", attr_keygen->name);
 	}
 }
 
@@ -1327,12 +1327,12 @@ void html5_render_attributes_label(html5_attributes_label *attr_label)
 	
 	if(attr_label->for_ != NULL)
 	{
-		printf(" for=\"%s\"", attr_label->for_);
+		fprintf(stdout, " for=\"%s\"", attr_label->for_);
 	}
 	
 	if(attr_label->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_label->form);
+		fprintf(stdout, " form=\"%s\"", attr_label->form);
 	}
 }
 
@@ -1342,7 +1342,7 @@ void html5_render_attributes_li(html5_attributes_li *attr_li)
 
 	if(attr_li->value != NULL)
 	{
-		printf(" value=\"%s\"", attr_li->value);
+		fprintf(stdout, " value=\"%s\"", attr_li->value);
 	}
 }
 
@@ -1352,32 +1352,32 @@ void html5_render_attributes_link(html5_attributes_link *attr_link)
 	
 	if(attr_link->href != NULL)
 	{
-		printf(" href=\"%s\"", attr_link->href);
+		fprintf(stdout, " href=\"%s\"", attr_link->href);
 	}
 	
 	if(attr_link->hreflang != NULL)
 	{
-		printf(" hreflang=\"%s\"", attr_link->hreflang);
+		fprintf(stdout, " hreflang=\"%s\"", attr_link->hreflang);
 	}
 	
 	if(attr_link->media != NULL)
 	{
-		printf(" media=\"%s\"", attr_link->media);
+		fprintf(stdout, " media=\"%s\"", attr_link->media);
 	}
 	
 	if(attr_link->rel != NULL)
 	{
-		printf(" rel=\"%s\"", attr_link->rel);
+		fprintf(stdout, " rel=\"%s\"", attr_link->rel);
 	}
 	
 	if(attr_link->sizes != NULL)
 	{
-		printf(" sizes=\"%s\"", attr_link->sizes);
+		fprintf(stdout, " sizes=\"%s\"", attr_link->sizes);
 	}
 	
 	if(attr_link->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_link->type);
+		fprintf(stdout, " type=\"%s\"", attr_link->type);
 	}
 }
 
@@ -1387,7 +1387,7 @@ void html5_render_attributes_map(html5_attributes_map *attr_map)
 
 	if(attr_map->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_map->name);
+		fprintf(stdout, " name=\"%s\"", attr_map->name);
 	}
 }
 
@@ -1397,12 +1397,12 @@ void html5_render_attributes_menu(html5_attributes_menu *attr_menu)
 	
 	if(attr_menu->label != NULL)
 	{
-		printf(" label=\"%s\"", attr_menu->label);
+		fprintf(stdout, " label=\"%s\"", attr_menu->label);
 	}
 	
 	if(attr_menu->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_menu->type);
+		fprintf(stdout, " type=\"%s\"", attr_menu->type);
 	}
 }
 void html5_render_attributes_meta(html5_attributes_meta *attr_meta)
@@ -1411,22 +1411,22 @@ void html5_render_attributes_meta(html5_attributes_meta *attr_meta)
 	
 	if(attr_meta->charset != NULL)
 	{
-		printf(" charset=\"%s\"", attr_meta->charset);
+		fprintf(stdout, " charset=\"%s\"", attr_meta->charset);
 	}
 	
 	if(attr_meta->content != NULL)
 	{
-		printf(" content=\"%s\"", attr_meta->content);
+		fprintf(stdout, " content=\"%s\"", attr_meta->content);
 	}
 	
 	if(attr_meta->http_equiv != NULL)
 	{
-		printf(" http-equiv=\"%s\"", attr_meta->http_equiv);
+		fprintf(stdout, " http-equiv=\"%s\"", attr_meta->http_equiv);
 	}
 	
 	if(attr_meta->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_meta->name);
+		fprintf(stdout, " name=\"%s\"", attr_meta->name);
 	}
 }
 
@@ -1436,42 +1436,42 @@ void html5_render_attributes_meter(html5_attributes_meter *attr_meter)
 	
 	if(attr_meter->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_meter->form);
+		fprintf(stdout, " form=\"%s\"", attr_meter->form);
 	}
 	
 	if(attr_meter->high != NULL)
 	{
-		printf(" high=\"%s\"", attr_meter->high);
+		fprintf(stdout, " high=\"%s\"", attr_meter->high);
 	}
 	
 		
 	if(attr_meter->low != NULL)
 	{
-		printf(" low=\"%s\"", attr_meter->low);
+		fprintf(stdout, " low=\"%s\"", attr_meter->low);
 	}
 	
 		
 	if(attr_meter->max != NULL)
 	{
-		printf(" max=\"%s\"", attr_meter->max);
+		fprintf(stdout, " max=\"%s\"", attr_meter->max);
 	}
 	
 		
 	if(attr_meter->min != NULL)
 	{
-		printf(" min=\"%s\"", attr_meter->min);
+		fprintf(stdout, " min=\"%s\"", attr_meter->min);
 	}
 	
 		
 	if(attr_meter->optimum != NULL)
 	{
-		printf(" optimum=\"%s\"", attr_meter->optimum);
+		fprintf(stdout, " optimum=\"%s\"", attr_meter->optimum);
 	}
 	
 		
 	if(attr_meter->value != NULL)
 	{
-		printf(" value=\"%s\"", attr_meter->value);
+		fprintf(stdout, " value=\"%s\"", attr_meter->value);
 	}
 }
 
@@ -1481,37 +1481,37 @@ void html5_render_attributes_object(html5_attributes_object *attr_object)
 
 	if(attr_object->data != NULL)
 	{
-		printf(" data=\"%s\"", attr_object->data);
+		fprintf(stdout, " data=\"%s\"", attr_object->data);
 	}
 	
 	if(attr_object->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_object->form);
+		fprintf(stdout, " form=\"%s\"", attr_object->form);
 	}
 	
 		if(attr_object->height != NULL)
 	{
-		printf(" height=\"%s\"", attr_object->height);
+		fprintf(stdout, " height=\"%s\"", attr_object->height);
 	}
 	
 		if(attr_object->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_object->name);
+		fprintf(stdout, " name=\"%s\"", attr_object->name);
 	}
 	
 		if(attr_object->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_object->type);
+		fprintf(stdout, " type=\"%s\"", attr_object->type);
 	}
 	
 	if(attr_object->usemap != NULL)
 	{
-		printf(" usemap=\"%s\"", attr_object->usemap);
+		fprintf(stdout, " usemap=\"%s\"", attr_object->usemap);
 	}
 
 	if(attr_object->width != NULL)
 	{
-		printf(" width=\"%s\"", attr_object->width);
+		fprintf(stdout, " width=\"%s\"", attr_object->width);
 	}
 }
 
@@ -1521,17 +1521,17 @@ void html5_render_attributes_ol(html5_attributes_ol *attr_ol)
 	
 	if(attr_ol->reversed != NULL)
 	{
-		printf(" reversed=\"%s\"", attr_ol->reversed);
+		fprintf(stdout, " reversed=\"%s\"", attr_ol->reversed);
 	}
 	
 	if(attr_ol->start != NULL)
 	{
-		printf(" start=\"%s\"", attr_ol->start);
+		fprintf(stdout, " start=\"%s\"", attr_ol->start);
 	}
 	
 	if(attr_ol->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_ol->type);
+		fprintf(stdout, " type=\"%s\"", attr_ol->type);
 	}
 }
 
@@ -1541,12 +1541,12 @@ void html5_render_attributes_optgroup(html5_attributes_optgroup *attr_optgroup)
 	
 	if(attr_optgroup->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_optgroup->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_optgroup->disabled);
 	}
 	
 	if(attr_optgroup->label != NULL)
 	{
-		printf(" label=\"%s\"", attr_optgroup->label);
+		fprintf(stdout, " label=\"%s\"", attr_optgroup->label);
 	}
 
 }
@@ -1557,22 +1557,22 @@ void html5_render_attributes_option(html5_attributes_option *attr_option)
 
 	if(attr_option->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_option->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_option->disabled);
 	}
 	
 	if(attr_option->label != NULL)
 	{
-		printf(" label=\"%s\"", attr_option->label);
+		fprintf(stdout, " label=\"%s\"", attr_option->label);
 	}
 	
 	if(attr_option->selected != NULL)
 	{
-		printf(" selected=\"%s\"", attr_option->selected);
+		fprintf(stdout, " selected=\"%s\"", attr_option->selected);
 	}
 	
 	if(attr_option->value != NULL)
 	{
-		printf(" value=\"%s\"", attr_option->value);
+		fprintf(stdout, " value=\"%s\"", attr_option->value);
 	}
 }
 
@@ -1582,17 +1582,17 @@ void html5_render_attributes_output(html5_attributes_output *attr_output)
 	
 	if(attr_output->for_ != NULL)
 	{
-		printf(" for=\"%s\"", attr_output->for_);
+		fprintf(stdout, " for=\"%s\"", attr_output->for_);
 	}
 	
 	if(attr_output->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_output->form);
+		fprintf(stdout, " form=\"%s\"", attr_output->form);
 	}
 	
 	if(attr_output->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_output->name);
+		fprintf(stdout, " name=\"%s\"", attr_output->name);
 	}
 	
 }
@@ -1603,12 +1603,12 @@ void html5_render_attributes_param(html5_attributes_param *attr_param)
 	
 	if(attr_param->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_param->name);
+		fprintf(stdout, " name=\"%s\"", attr_param->name);
 	}
 	
 	if(attr_param->value != NULL)
 	{
-		printf(" value=\"%s\"", attr_param->value);
+		fprintf(stdout, " value=\"%s\"", attr_param->value);
 	}
 }
 
@@ -1618,12 +1618,12 @@ void html5_render_attributes_progress(html5_attributes_progress *attr_progress)
 	
 	if(attr_progress->max != NULL)
 	{
-		printf(" max=\"%s\"", attr_progress->max);
+		fprintf(stdout, " max=\"%s\"", attr_progress->max);
 	}
 	
 	if(attr_progress->value != NULL)
 	{
-		printf(" value=\"%s\"", attr_progress->value);
+		fprintf(stdout, " value=\"%s\"", attr_progress->value);
 	}
 }
 
@@ -1633,7 +1633,7 @@ void html5_render_attributes_q(html5_attributes_q *attr_q)
 
 	if(attr_q->cite != NULL)
 	{
-		printf(" cite=\"%s\"", attr_q->cite);
+		fprintf(stdout, " cite=\"%s\"", attr_q->cite);
 	}
 }
 
@@ -1643,27 +1643,27 @@ void html5_render_attributes_script(html5_attributes_script *attr_script)
 	
 	if(attr_script->async != NULL)
 	{
-		printf(" async=\"%s\"", attr_script->async);
+		fprintf(stdout, " async=\"%s\"", attr_script->async);
 	}
 	
 	if(attr_script->charset != NULL)
 	{
-		printf(" charset=\"%s\"", attr_script->charset);
+		fprintf(stdout, " charset=\"%s\"", attr_script->charset);
 	}
 	
 	if(attr_script->defer != NULL)
 	{
-		printf(" defer=\"%s\"", attr_script->defer);
+		fprintf(stdout, " defer=\"%s\"", attr_script->defer);
 	}
 	
 	if(attr_script->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_script->src);
+		fprintf(stdout, " src=\"%s\"", attr_script->src);
 	}
 	
 	if(attr_script->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_script->type);
+		fprintf(stdout, " type=\"%s\"", attr_script->type);
 	}
 }
 
@@ -1673,32 +1673,32 @@ void html5_render_attributes_select(html5_attributes_select *attr_select)
 	
 	if(attr_select->autofocus != NULL)
 	{
-		printf(" autofocus=\"%s\"", attr_select->autofocus);
+		fprintf(stdout, " autofocus=\"%s\"", attr_select->autofocus);
 	}
 	
 	if(attr_select->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_select->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_select->disabled);
 	}
 	
 	if(attr_select->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_select->form);
+		fprintf(stdout, " form=\"%s\"", attr_select->form);
 	}
 	
 	if(attr_select->multiple != NULL)
 	{
-		printf(" multiple=\"%s\"", attr_select->multiple);
+		fprintf(stdout, " multiple=\"%s\"", attr_select->multiple);
 	}
 	
 	if(attr_select->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_select->name);
+		fprintf(stdout, " name=\"%s\"", attr_select->name);
 	}
 	
 	if(attr_select->size != NULL)
 	{
-		printf(" size=\"%s\"", attr_select->size);
+		fprintf(stdout, " size=\"%s\"", attr_select->size);
 	}
 }
 
@@ -1708,17 +1708,17 @@ void html5_render_attributes_source(html5_attributes_source *attr_source)
 
 	if(attr_source->media != NULL)
 	{
-		printf(" media=\"%s\"", attr_source->media);
+		fprintf(stdout, " media=\"%s\"", attr_source->media);
 	}
 	
 	if(attr_source->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_source->src);
+		fprintf(stdout, " src=\"%s\"", attr_source->src);
 	}
 	
 	if(attr_source->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_source->type);
+		fprintf(stdout, " type=\"%s\"", attr_source->type);
 	}
 }
 
@@ -1728,17 +1728,17 @@ void html5_render_attributes_style(html5_attributes_style *attr_style)
 	
 	if(attr_style->media != NULL)
 	{
-		printf(" media=\"%s\"", attr_style->media);
+		fprintf(stdout, " media=\"%s\"", attr_style->media);
 	}
 	
 	if(attr_style->scorped != NULL)
 	{
-		printf(" scorped=\"%s\"", attr_style->scorped);
+		fprintf(stdout, " scorped=\"%s\"", attr_style->scorped);
 	}
 	
 	if(attr_style->type != NULL)
 	{
-		printf(" type=\"%s\"", attr_style->type);
+		fprintf(stdout, " type=\"%s\"", attr_style->type);
 	}
 }
 
@@ -1748,7 +1748,7 @@ void html5_render_attributes_table(html5_attributes_table *attr_table)
 
 	if(attr_table->border != NULL)
 	{
-		printf(" border=\"%s\"", attr_table->border);
+		fprintf(stdout, " border=\"%s\"", attr_table->border);
 	}
 }
 
@@ -1758,17 +1758,17 @@ void html5_render_attributes_td(html5_attributes_td *attr_td)
 
 	if(attr_td->colspan != NULL)
 	{
-		printf(" colspan=\"%s\"", attr_td->colspan);
+		fprintf(stdout, " colspan=\"%s\"", attr_td->colspan);
 	}
 	
 	if(attr_td->headers != NULL)
 	{
-		printf(" headers=\"%s\"", attr_td->headers);
+		fprintf(stdout, " headers=\"%s\"", attr_td->headers);
 	}
 	
 	if(attr_td->rowspan != NULL)
 	{
-		printf(" rowspan=\"%s\"", attr_td->rowspan);
+		fprintf(stdout, " rowspan=\"%s\"", attr_td->rowspan);
 	}
 }
 
@@ -1778,57 +1778,57 @@ void html5_render_attributes_textarea(html5_attributes_textarea *attr_textarea)
 
 	if(attr_textarea->autofocus != NULL)
 	{
-		printf(" autofocus=\"%s\"", attr_textarea->autofocus);
+		fprintf(stdout, " autofocus=\"%s\"", attr_textarea->autofocus);
 	}
 	
 	if(attr_textarea->cols != NULL)
 	{
-		printf("<a cols=\"%s\"", attr_textarea->cols);
+		fprintf(stdout, "<a cols=\"%s\"", attr_textarea->cols);
 	}
 	
 	if(attr_textarea->disabled != NULL)
 	{
-		printf(" disabled=\"%s\"", attr_textarea->disabled);
+		fprintf(stdout, " disabled=\"%s\"", attr_textarea->disabled);
 	}
 	
 	if(attr_textarea->form != NULL)
 	{
-		printf(" form=\"%s\"", attr_textarea->form);
+		fprintf(stdout, " form=\"%s\"", attr_textarea->form);
 	}
 	
 	if(attr_textarea->maxlength != NULL)
 	{
-		printf(" maxlength=\"%s\"", attr_textarea->maxlength);
+		fprintf(stdout, " maxlength=\"%s\"", attr_textarea->maxlength);
 	}
 	
 	if(attr_textarea->name != NULL)
 	{
-		printf(" name=\"%s\"", attr_textarea->name);
+		fprintf(stdout, " name=\"%s\"", attr_textarea->name);
 	}
 	
 	if(attr_textarea->placeholder != NULL)
 	{
-		printf(" placeholder=\"%s\"", attr_textarea->placeholder);
+		fprintf(stdout, " placeholder=\"%s\"", attr_textarea->placeholder);
 	}
 	
 	if(attr_textarea->readonly != NULL)
 	{
-		printf(" readonly=\"%s\"", attr_textarea->readonly);
+		fprintf(stdout, " readonly=\"%s\"", attr_textarea->readonly);
 	}
 	
 	if(attr_textarea->required != NULL)
 	{
-		printf(" required=\"%s\"", attr_textarea->required);
+		fprintf(stdout, " required=\"%s\"", attr_textarea->required);
 	}
 	
 	if(attr_textarea->rows != NULL)
 	{
-		printf(" required=\"%s\"", attr_textarea->required);
+		fprintf(stdout, " required=\"%s\"", attr_textarea->required);
 	}
 	
 	if(attr_textarea->wrap != NULL)
 	{
-		printf(" wrap=\"%s\"", attr_textarea->wrap);
+		fprintf(stdout, " wrap=\"%s\"", attr_textarea->wrap);
 	}
 }
 
@@ -1838,27 +1838,27 @@ void html5_render_attributes_th(html5_attributes_th *attr_th)
 	
 	if(attr_th->colspan != NULL)
 	{
-		printf(" colspan=\"%s\"", attr_th->colspan);
+		fprintf(stdout, " colspan=\"%s\"", attr_th->colspan);
 	}
 	
 	if(attr_th->colspan != NULL)
 	{
-		printf(" colspan=\"%s\"", attr_th->colspan);
+		fprintf(stdout, " colspan=\"%s\"", attr_th->colspan);
 	}
 	
 	if(attr_th->headers != NULL)
 	{
-		printf(" headers=\"%s\"", attr_th->headers);
+		fprintf(stdout, " headers=\"%s\"", attr_th->headers);
 	}
 	
 	if(attr_th->rowspan != NULL)
 	{
-		printf(" rowspan=\"%s\"", attr_th->rowspan);
+		fprintf(stdout, " rowspan=\"%s\"", attr_th->rowspan);
 	}
 	
 	if(attr_th->scope != NULL)
 	{
-		printf(" scope=\"%s\"", attr_th->scope);
+		fprintf(stdout, " scope=\"%s\"", attr_th->scope);
 	}
 }
 
@@ -1868,12 +1868,12 @@ void html5_render_attributes_time(html5_attributes_time *attr_time)
 	
 	if(attr_time->datetime != NULL)
 	{
-		printf(" datetime=\"%s\"", attr_time->datetime);
+		fprintf(stdout, " datetime=\"%s\"", attr_time->datetime);
 	}
 	
 	if(attr_time->pubdate != NULL)
 	{
-		printf(" pubdate=\"%s\"", attr_time->pubdate);
+		fprintf(stdout, " pubdate=\"%s\"", attr_time->pubdate);
 	}
 	
 }
@@ -1884,27 +1884,27 @@ void html5_render_attributes_track(html5_attributes_track *attr_track)
 
 	if(attr_track->default_ != NULL)
 	{
-		printf(" default=\"%s\"", attr_track->default_);
+		fprintf(stdout, " default=\"%s\"", attr_track->default_);
 	}
 	
 	if(attr_track->kind != NULL)
 	{
-		printf(" kind=\"%s\"", attr_track->kind);
+		fprintf(stdout, " kind=\"%s\"", attr_track->kind);
 	}
 	
 	if(attr_track->label != NULL)
 	{
-		printf(" label=\"%s\"", attr_track->label);
+		fprintf(stdout, " label=\"%s\"", attr_track->label);
 	}
 	
 	if(attr_track->src != NULL)
 	{
-		printf(" src=\"%s\"", attr_track->src);
+		fprintf(stdout, " src=\"%s\"", attr_track->src);
 	}
 	
 	if(attr_track->srclang != NULL)
 	{
-		printf(" srclang=\"%s\"", attr_track->srclang);
+		fprintf(stdout, " srclang=\"%s\"", attr_track->srclang);
 	}
 }
 
@@ -1914,37 +1914,37 @@ void html5_render_attributes_video(html5_attributes_video *attr_video)
 
 	if(attr_video->autoplay != NULL)
 	{
-		printf(" autoplay=\"%s\"", attr_video->autoplay);
+		fprintf(stdout, " autoplay=\"%s\"", attr_video->autoplay);
 	}
 	
 	if(attr_video->controls != NULL)
 	{
-		printf(" controls=\"%s\"", attr_video->controls);
+		fprintf(stdout, " controls=\"%s\"", attr_video->controls);
 	}
 	
 	if(attr_video->height != NULL)
 	{
-		printf(" height=\"%s\"", attr_video->height);
+		fprintf(stdout, " height=\"%s\"", attr_video->height);
 	}
 	
 	if(attr_video->loop != NULL)
 	{
-		printf(" loop=\"%s\"", attr_video->loop);
+		fprintf(stdout, " loop=\"%s\"", attr_video->loop);
 	}
 	
 	if(attr_video->muted != NULL)
 	{
-		printf(" muted=\"%s\"", attr_video->muted);
+		fprintf(stdout, " muted=\"%s\"", attr_video->muted);
 	}
 	
 	if(attr_video->poster != NULL)
 	{
-		printf(" poster=\"%s\"", attr_video->poster);
+		fprintf(stdout, " poster=\"%s\"", attr_video->poster);
 	}
 	
 	if(attr_video->preload != NULL)
 	{
-		printf(" preload=\"%s\"", attr_video->preload);
+		fprintf(stdout, " preload=\"%s\"", attr_video->preload);
 	}
 }
 
@@ -2409,1261 +2409,1261 @@ void html5_tag_end(const char *tagname)
 
 void html5_a(html5_attributes_global *html5_attr_global, html5_attributes_a *html5_attr_a, html5_event_attributes *html5_attr_event)
 {
-	printf("<a");
+	fprintf(stdout, "<a");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_a(html5_attr_a);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_abbr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<abbr");
+	fprintf(stdout, "<abbr");
 	
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 	
-	printf("/>");
+	fprintf(stdout, "/>");
 }
 
 void html5_attributes_abbr_outset(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<abbr");
+	fprintf(stdout, "<abbr");
 	
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 	
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 
 void html5_area(html5_attributes_global *html5_attr_global, html5_attributes_area *html5_attr_area, html5_event_attributes *html5_attr_event)
 {
-	printf("<area");
+	fprintf(stdout, "<area");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_area(html5_attr_area);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_audio(html5_attributes_global *html5_attr_global, html5_attributes_audio *html5_attr_audio, html5_event_attributes *html5_attr_event)
 {
-	printf("<audio");
+	fprintf(stdout, "<audio");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_audio(html5_attr_audio);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">\n");
+	fprintf(stdout, ">\n");
 }
 
 void html5_base(html5_attributes_global *html5_attr_global, html5_attributes_base *html5_attr_base, html5_event_attributes *html5_attr_event)
 {
-	printf("<base");
+	fprintf(stdout, "<base");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_base(html5_attr_base);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">\n");
+	fprintf(stdout, ">\n");
 }
 
 void html5_bdo(html5_attributes_global *html5_attr_global, html5_attributes_bdo *html5_attr_bdo, html5_event_attributes *html5_attr_event)
 {
-	printf("<bdo");
+	fprintf(stdout, "<bdo");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_bdo(html5_attr_bdo);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">\n");
+	fprintf(stdout, ">\n");
 }
 
 void html5_blockquote(html5_attributes_global *html5_attr_global, html5_attributes_blockquote *html5_attr_blockquote, html5_event_attributes *html5_attr_event)
 {
-	printf("<blockquote");
+	fprintf(stdout, "<blockquote");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_blockquote(html5_attr_blockquote);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 // void html5_body(html5_attributes_global *html5_attr_global, html5_attributes_body *html5_attr_body, html5_event_attributes *html5_attr_event)
 // {
-// 	printf("<body");
+// 	fprintf(stdout, "<body");
 // 
 // 	html5_render_attributes_global(html5_attr_global);
 // 	html5_render_attributes_body(html5_attr_body);
 // 	html5_render_event_attributes(html5_attr_event);
 // 
-// 	printf(">");
+// 	fprintf(stdout, ">");
 // }
 
 void html5_button(html5_attributes_global *html5_attr_global, html5_attributes_button *html5_attr_button, html5_event_attributes *html5_attr_event)
 {
-	printf("<button");
+	fprintf(stdout, "<button");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_button(html5_attr_button);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_canvas(html5_attributes_global *html5_attr_global, html5_attributes_canvas *html5_attr_canvas, html5_event_attributes *html5_attr_event)
 {
-	printf("<canvas");
+	fprintf(stdout, "<canvas");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_canvas(html5_attr_canvas);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_col(html5_attributes_global *html5_attr_global, html5_attributes_col *html5_attr_col, html5_event_attributes *html5_attr_event)
 {
-	printf("<col");
+	fprintf(stdout, "<col");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_col(html5_attr_col);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_colgroup(html5_attributes_global *html5_attr_global, html5_attributes_colgroup *html5_attr_colgroup, html5_event_attributes *html5_attr_event)
 {
-	printf("<colgroup");
+	fprintf(stdout, "<colgroup");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_colgroup(html5_attr_colgroup);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_command(html5_attributes_global *html5_attr_global, html5_attributes_command *html5_attr_command, html5_event_attributes *html5_attr_event)
 {
-	printf("<command");
+	fprintf(stdout, "<command");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_command(html5_attr_command);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_del(html5_attributes_global *html5_attr_global, html5_attributes_del *html5_attr_del, html5_event_attributes *html5_attr_event)
 {
-	printf("<del");
+	fprintf(stdout, "<del");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_del(html5_attr_del);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_details(html5_attributes_global *html5_attr_global, html5_attributes_details *html5_attr_details, html5_event_attributes *html5_attr_event)
 {
-	printf("<details");
+	fprintf(stdout, "<details");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_details(html5_attr_details);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_embed(html5_attributes_global *html5_attr_global, html5_attributes_embed *html5_attr_embed, html5_event_attributes *html5_attr_event)
 {
-	printf("<embed");
+	fprintf(stdout, "<embed");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_embed(html5_attr_embed);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_fieldset(html5_attributes_global *html5_attr_global, html5_attributes_fieldset *html5_attr_fieldset, html5_event_attributes *html5_attr_event)
 {
-	printf("<fieldset");
+	fprintf(stdout, "<fieldset");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_fieldset(html5_attr_fieldset);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_form(html5_attributes_global *html5_attr_global, html5_attributes_form *html5_attr_form, html5_event_attributes *html5_attr_event)
 {
-	printf("<form");
+	fprintf(stdout, "<form");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_form(html5_attr_form);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_html(html5_attributes_global *html5_attr_global, html5_attributes_html *html5_attr_html, html5_event_attributes *html5_attr_event)
 {
-	printf("<html");
+	fprintf(stdout, "<html");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_html(html5_attr_html);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">\n");
+	fprintf(stdout, ">\n");
 }
 
 void html5_iframe(html5_attributes_global *html5_attr_global, html5_attributes_iframe *html5_attr_iframe, html5_event_attributes *html5_attr_event)
 {
-	printf("<iframe");
+	fprintf(stdout, "<iframe");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_iframe(html5_attr_iframe);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_img(html5_attributes_global *html5_attr_global, html5_attributes_img *html5_attr_img, html5_event_attributes *html5_attr_event)
 {
-	printf("<img");
+	fprintf(stdout, "<img");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_img(html5_attr_img);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(" />");
+	fprintf(stdout, " />");
 }
 
 void html5_input(html5_attributes_global *html5_attr_global, html5_attributes_input *html5_attr_input, html5_event_attributes *html5_attr_event)
 {
-	printf("<input");
+	fprintf(stdout, "<input");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_input(html5_attr_input);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(" />");
+	fprintf(stdout, " />");
 }
 
 void html5_ins(html5_attributes_global *html5_attr_global, html5_attributes_ins *html5_attr_ins, html5_event_attributes *html5_attr_event)
 {
-	printf("<ins");
+	fprintf(stdout, "<ins");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_ins(html5_attr_ins);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_keygen(html5_attributes_global *html5_attr_global, html5_attributes_keygen *html5_attr_keygen, html5_event_attributes *html5_attr_event)
 {
-	printf("<keygen");
+	fprintf(stdout, "<keygen");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_keygen(html5_attr_keygen);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_label(html5_attributes_global *html5_attr_global, html5_attributes_label *html5_attr_label, html5_event_attributes *html5_attr_event)
 {
-	printf("<label");
+	fprintf(stdout, "<label");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_label(html5_attr_label);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_li(html5_attributes_global *html5_attr_global, html5_attributes_li *html5_attr_li, html5_event_attributes *html5_attr_event)
 {
-	printf("<li");
+	fprintf(stdout, "<li");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_li(html5_attr_li);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_link(html5_attributes_global *html5_attr_global, html5_attributes_link *html5_attr_link, html5_event_attributes *html5_attr_event)
 {
-	printf("<link");
+	fprintf(stdout, "<link");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_link(html5_attr_link);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(" />\n");
+	fprintf(stdout, " />\n");
 }
 
 void html5_map(html5_attributes_global *html5_attr_global, html5_attributes_map *html5_attr_map, html5_event_attributes *html5_attr_event)
 {
-	printf("<map");
+	fprintf(stdout, "<map");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_map(html5_attr_map);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_menu(html5_attributes_global *html5_attr_global, html5_attributes_menu *html5_attr_menu, html5_event_attributes *html5_attr_event)
 {
-	printf("<menu");
+	fprintf(stdout, "<menu");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_menu(html5_attr_menu);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_meta(html5_attributes_global *html5_attr_global, html5_attributes_meta *html5_attr_meta, html5_event_attributes *html5_attr_event)
 {
-	printf("<meta");
+	fprintf(stdout, "<meta");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_meta(html5_attr_meta);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_meter(html5_attributes_global *html5_attr_global, html5_attributes_meter *html5_attr_meter, html5_event_attributes *html5_attr_event)
 {
-	printf("<meter");
+	fprintf(stdout, "<meter");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_meter(html5_attr_meter);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_object(html5_attributes_global *html5_attr_global, html5_attributes_object *html5_attr_object, html5_event_attributes *html5_attr_event)
 {
-	printf("<object");
+	fprintf(stdout, "<object");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_object(html5_attr_object);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_ol(html5_attributes_global *html5_attr_global, html5_attributes_ol *html5_attr_ol, html5_event_attributes *html5_attr_event)
 {
-	printf("<ol");
+	fprintf(stdout, "<ol");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_ol(html5_attr_ol);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_optgroup(html5_attributes_global *html5_attr_global, html5_attributes_optgroup *html5_attr_optgroup, html5_event_attributes *html5_attr_event)
 {
-	printf("<optgroup");
+	fprintf(stdout, "<optgroup");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_optgroup(html5_attr_optgroup);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_option(html5_attributes_global *html5_attr_global, html5_attributes_option *html5_attr_option, html5_event_attributes *html5_attr_event)
 {
-	printf("<option");
+	fprintf(stdout, "<option");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_option(html5_attr_option);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_output(html5_attributes_global *html5_attr_global, html5_attributes_output *html5_attr_output, html5_event_attributes *html5_attr_event)
 {
-	printf("<output");
+	fprintf(stdout, "<output");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_output(html5_attr_output);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_param(html5_attributes_global *html5_attr_global, html5_attributes_param *html5_attr_param, html5_event_attributes *html5_attr_event)
 {
-	printf("<param");
+	fprintf(stdout, "<param");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_param(html5_attr_param);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_progress(html5_attributes_global *html5_attr_global, html5_attributes_progress *html5_attr_progress, html5_event_attributes *html5_attr_event)
 {
-	printf("<progress");
+	fprintf(stdout, "<progress");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_progress(html5_attr_progress);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_q(html5_attributes_global *html5_attr_global, html5_attributes_q *html5_attr_q, html5_event_attributes *html5_attr_event)
 {
-	printf("<q");
+	fprintf(stdout, "<q");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_q(html5_attr_q);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_script(html5_attributes_global *html5_attr_global, html5_attributes_script *html5_attr_script, html5_event_attributes *html5_attr_event)
 {
-	printf("<script");
+	fprintf(stdout, "<script");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_script(html5_attr_script);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_select(html5_attributes_global *html5_attr_global, html5_attributes_select *html5_attr_select, html5_event_attributes *html5_attr_event)
 {
-	printf("<select");
+	fprintf(stdout, "<select");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_select(html5_attr_select);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_source(html5_attributes_global *html5_attr_global, html5_attributes_source *html5_attr_source, html5_event_attributes *html5_attr_event)
 {
-	printf("<source");
+	fprintf(stdout, "<source");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_source(html5_attr_source);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_style(html5_attributes_global *html5_attr_global, html5_attributes_style *html5_attr_style, html5_event_attributes *html5_attr_event)
 {
-	printf("<style");
+	fprintf(stdout, "<style");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_style(html5_attr_style);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_table(html5_attributes_global *html5_attr_global, html5_attributes_table *html5_attr_table, html5_event_attributes *html5_attr_event)
 {
-	printf("<table");
+	fprintf(stdout, "<table");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_table(html5_attr_table);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_td(html5_attributes_global *html5_attr_global, html5_attributes_td *html5_attr_td, html5_event_attributes *html5_attr_event)
 {
-	printf("<td");
+	fprintf(stdout, "<td");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_td(html5_attr_td);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_textarea(html5_attributes_global *html5_attr_global, html5_attributes_textarea *html5_attr_textarea, html5_event_attributes *html5_attr_event)
 {
-	printf("<textarea");
+	fprintf(stdout, "<textarea");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_textarea(html5_attr_textarea);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_th(html5_attributes_global *html5_attr_global, html5_attributes_th *html5_attr_th, html5_event_attributes *html5_attr_event)
 {
-	printf("<th");
+	fprintf(stdout, "<th");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_th(html5_attr_th);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_time(html5_attributes_global *html5_attr_global, html5_attributes_time *html5_attr_time, html5_event_attributes *html5_attr_event)
 {
-	printf("<time");
+	fprintf(stdout, "<time");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_time(html5_attr_time);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_track(html5_attributes_global *html5_attr_global, html5_attributes_track *html5_attr_track, html5_event_attributes *html5_attr_event)
 {
-	printf("<track");
+	fprintf(stdout, "<track");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_track(html5_attr_track);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_video(html5_attributes_global *html5_attr_global, html5_attributes_video *html5_attr_video, html5_event_attributes *html5_attr_event)
 {
-	printf("<video");
+	fprintf(stdout, "<video");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_attributes_video(html5_attr_video);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 
 void html5_acronym(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<acronym");
+	fprintf(stdout, "<acronym");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_address(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<address");
+	fprintf(stdout, "<address");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_applet(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<applet");
+	fprintf(stdout, "<applet");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_article(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<article");
+	fprintf(stdout, "<article");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_aside(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<aside");
+	fprintf(stdout, "<aside");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_b(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<b");
+	fprintf(stdout, "<b");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_basefont(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<basefont");
+	fprintf(stdout, "<basefont");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_bdi(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<bdi");
+	fprintf(stdout, "<bdi");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_big(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<big");
+	fprintf(stdout, "<big");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_br(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<br");
+	fprintf(stdout, "<br");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_caption(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<caption");
+	fprintf(stdout, "<caption");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_center(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<center");
+	fprintf(stdout, "<center");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_cite(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<cite");
+	fprintf(stdout, "<cite");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_code(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<code");
+	fprintf(stdout, "<code");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_datalist(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<datalist");
+	fprintf(stdout, "<datalist");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_dd(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<dd");
+	fprintf(stdout, "<dd");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_dfn(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<dfn");
+	fprintf(stdout, "<dfn");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_dir(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<dir");
+	fprintf(stdout, "<dir");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_div(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<div");
+	fprintf(stdout, "<div");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_dl(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<dl");
+	fprintf(stdout, "<dl");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_dt(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<dt");
+	fprintf(stdout, "<dt");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_em(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<em");
+	fprintf(stdout, "<em");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_figcaption(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<figcaption");
+	fprintf(stdout, "<figcaption");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_figure(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<figure");
+	fprintf(stdout, "<figure");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_font(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<font");
+	fprintf(stdout, "<font");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_footer(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<footer");
+	fprintf(stdout, "<footer");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_frame(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<frame");
+	fprintf(stdout, "<frame");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_frameset(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<frameset");
+	fprintf(stdout, "<frameset");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_h1(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<h1");
+	fprintf(stdout, "<h1");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_h2(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<h2");
+	fprintf(stdout, "<h2");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_h3(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<h3");
+	fprintf(stdout, "<h3");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_h4(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<h4");
+	fprintf(stdout, "<h4");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_h5(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<h5");
+	fprintf(stdout, "<h5");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_h6(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<h6");
+	fprintf(stdout, "<h6");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_head(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<head");
+	fprintf(stdout, "<head");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">\n");
+	fprintf(stdout, ">\n");
 }
 
 void html5_header(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<header");
+	fprintf(stdout, "<header");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_hgroup(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<hgroup");
+	fprintf(stdout, "<hgroup");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_hr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<hr");
+	fprintf(stdout, "<hr");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_i(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<i");
+	fprintf(stdout, "<i");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_kbd(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<kbd");
+	fprintf(stdout, "<kbd");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_legend(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<legend");
+	fprintf(stdout, "<legend");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_mark(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<mark");
+	fprintf(stdout, "<mark");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_nav(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<nav");
+	fprintf(stdout, "<nav");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_noframes(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<noframes");
+	fprintf(stdout, "<noframes");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_noscript(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<noscript");
+	fprintf(stdout, "<noscript");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_p(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<p");
+	fprintf(stdout, "<p");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_pre(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<pre");
+	fprintf(stdout, "<pre");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_rp(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<rp");
+	fprintf(stdout, "<rp");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_rt(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<rt");
+	fprintf(stdout, "<rt");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_ruby(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<ruby");
+	fprintf(stdout, "<ruby");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_s(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<s");
+	fprintf(stdout, "<s");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_samp(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<samp");
+	fprintf(stdout, "<samp");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_section(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<section");
+	fprintf(stdout, "<section");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_small(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<small");
+	fprintf(stdout, "<small");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_span(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<span");
+	fprintf(stdout, "<span");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_strike(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<strike");
+	fprintf(stdout, "<strike");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_strong(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<strong");
+	fprintf(stdout, "<strong");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_sub(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<sub");
+	fprintf(stdout, "<sub");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_summary(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<summary");
+	fprintf(stdout, "<summary");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_sup(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<sup");
+	fprintf(stdout, "<sup");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_tbody(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<tbody");
+	fprintf(stdout, "<tbody");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_tfoot(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<tfoot");
+	fprintf(stdout, "<tfoot");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_thead(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<thead");
+	fprintf(stdout, "<thead");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_title(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<title");
+	fprintf(stdout, "<title");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_tr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<tr");
+	fprintf(stdout, "<tr");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_tt(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<tt");
+	fprintf(stdout, "<tt");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_u(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<u");
+	fprintf(stdout, "<u");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_ul(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<ul");
+	fprintf(stdout, "<ul");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_var(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<var");
+	fprintf(stdout, "<var");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
 
 void html5_wbr(html5_attributes_global *html5_attr_global, html5_event_attributes *html5_attr_event)
 {
-	printf("<wbr");
+	fprintf(stdout, "<wbr");
 
 	html5_render_attributes_global(html5_attr_global);
 	html5_render_event_attributes(html5_attr_event);
 
-	printf(">");
+	fprintf(stdout, ">");
 }
